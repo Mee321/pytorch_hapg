@@ -6,7 +6,7 @@ import torch.nn as nn
 import numpy as np
 import math
 
-from a2c_ppo_acktr.envs import VecNormalize
+from hapg.envs import VecNormalize
 
 
 # Get a render function

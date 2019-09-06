@@ -11,13 +11,13 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 
-from a2c_ppo_acktr.algo.vpg_dice import VPG_DICE
-from a2c_ppo_acktr.utils import *
-from a2c_ppo_acktr.algo import gail
-from a2c_ppo_acktr.arguments import get_args
-from a2c_ppo_acktr.envs import make_vec_envs
-from a2c_ppo_acktr.model import Policy
-from a2c_ppo_acktr.storage import RolloutStorage
+from hapg.algo.vpg_dice import VPG_DICE
+from hapg.utils import *
+from hapg.algo import gail
+from hapg.arguments import get_args
+from hapg.envs import make_vec_envs
+from hapg.model import Policy
+from hapg.storage import RolloutStorage
 from evaluation import evaluate
 
 GAMMA = 0.995

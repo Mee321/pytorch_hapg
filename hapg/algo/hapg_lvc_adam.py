@@ -1,8 +1,8 @@
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from a2c_ppo_acktr.utils import *
-from a2c_ppo_acktr.adam import Adam_optimizer
+from hapg.utils import *
+from hapg.adam import Adam_optimizer
 
 # LVC version, DiCE with a bug when denominater becomes 0
 class HAPG_LVC():

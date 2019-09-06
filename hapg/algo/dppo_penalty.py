@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
-from a2c_ppo_acktr.utils import *
+from hapg.utils import *
 from torch.autograd import Variable
 
 class PPO_Penalty():
@@ -34,7 +34,6 @@ class PPO_Penalty():
         self.optimizer = optim.Adam(actor_critic.parameters(), lr=lr, eps=eps)
 
     def update(self, rollouts):
-        kl_total = 0
         advantages = rollouts.returns[:-1] - rollouts.value_preds[:-1]
         advantages = (advantages - advantages.mean()) / (
             advantages.std() + 1e-5)
@@ -45,6 +44,7 @@ class PPO_Penalty():
 
         global_net_params = get_flat_params_from(self.actor_critic)
         for e in range(self.ppo_epoch):
+            self.kl_coef = 0.2
             if self.actor_critic.is_recurrent:
                 data_generator = rollouts.recurrent_generator(
                     advantages, self.num_mini_batch)
@@ -67,7 +67,7 @@ class PPO_Penalty():
                 values, mean1, std1, action_log_probs, dist_entropy, _ = self.actor_critic.evaluate_actions_kl(
                     obs_batch, recurrent_hidden_states_batch, masks_batch,
                     actions_batch)
-
+                print(action_log_probs, old_action_log_probs_batch)
                 ratio = torch.exp(action_log_probs -
                                   old_action_log_probs_batch)
                 mean0 = Variable(mean0.data)
@@ -80,8 +80,8 @@ class PPO_Penalty():
                 #surr2 = torch.clamp(ratio, 1.0 - self.clip_param,
                  #                   1.0 + self.clip_param) * adv_targ
                 kl_mean = kls.sum(1, keepdim=True).mean()
-                kl_total += kl_mean.data
                 action_loss = -surr1.mean() + kl_mean * self.kl_coef
+                #print(kl_mean.data, self.kl_coef)
                 if self.use_clipped_value_loss:
                     value_pred_clipped = value_preds_batch + \
                         (values - value_preds_batch).clamp(-self.clip_param, self.clip_param)
@@ -100,22 +100,20 @@ class PPO_Penalty():
                  #                        self.max_grad_norm)
                 self.optimizer.step()
 
+                if kl_mean.data < self.kl_target/1.5:
+                    self.kl_coef /= 2
+                elif kl_mean.data > self.kl_target * 1.5:
+                    self.kl_coef *= 2
 
                 value_loss_epoch += value_loss.item()
                 action_loss_epoch += action_loss.item()
                 dist_entropy_epoch += dist_entropy.item()
+        updated_params = get_flat_params_from(self.actor_critic)
+        set_flat_params_to(self.actor_critic, global_net_params)
         num_updates = self.ppo_epoch * self.num_mini_batch
-        if kl_total/num_updates < self.kl_target / 1.5:
-            self.kl_coef /= 2
-        elif kl_total/num_updates > self.kl_target * 1.5:
-            self.kl_coef *= 2
-        print(kl_total/num_updates, self.kl_coef)
-
-        #updated_params = get_flat_params_from(self.actor_critic)
-        #set_flat_params_to(self.actor_critic, global_net_params)
 
         value_loss_epoch /= num_updates
         action_loss_epoch /= num_updates
         dist_entropy_epoch /= num_updates
 
-        return value_loss_epoch, action_loss_epoch, dist_entropy_epoch
+        return updated_params, value_loss_epoch, action_loss_epoch, dist_entropy_epoch
