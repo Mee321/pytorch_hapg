@@ -19,7 +19,6 @@ from a2c_ppo_acktr.arguments import get_args
 from a2c_ppo_acktr.envs import make_vec_envs
 from a2c_ppo_acktr.model import Policy
 from a2c_ppo_acktr.storage import RolloutStorage
-from evaluation import evaluate
 
 GAMMA = 0.995
 LR = 3e-3

@@ -19,6 +19,7 @@ class HAPG_DICE():
         self.lr = lr
         self.max_grad_norm = max_grad_norm
         self.alignment = sum([len(p.view(-1)) for p in list(self.actor_critic.parameters())[4:10]])
+        # value net optimizer
         self.optimizer = optim.Adam(
             actor_critic.parameters(), lr=self.lr)
 
