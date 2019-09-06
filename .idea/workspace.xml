@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="591a2c43-3ba5-4482-a1f2-9a8990834d8d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HAPG_LVC/hapg_dice.py" beforeDir="false" afterPath="$PROJECT_DIR$/HAPG_LVC/hapg_dice.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HAPG_LVC/hapg_ps.py" beforeDir="false" afterPath="$PROJECT_DIR$/HAPG_LVC/hapg_ps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HAPG_LVC/sgd.py" beforeDir="false" afterPath="$PROJECT_DIR$/HAPG_LVC/sgd.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HAPG_LVC/sgd_ps.py" beforeDir="false" afterPath="$PROJECT_DIR$/HAPG_LVC/sgd_ps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HAPG_LVC/sgd_ps_ad.py" beforeDir="false" afterPath="$PROJECT_DIR$/HAPG_LVC/sgd_ps_ad.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a2c_ppo_acktr/algo/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/a2c_ppo_acktr/algo/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a2c_ppo_acktr/algo/hapg_dice.py" beforeDir="false" afterPath="$PROJECT_DIR$/a2c_ppo_acktr/algo/hapg_lvc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a2c_ppo_acktr/algo/hapg_dice_adam.py" beforeDir="false" afterPath="$PROJECT_DIR$/a2c_ppo_acktr/algo/hapg_lvc_adam.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hapg/algo/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/hapg/algo/__init__.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,50 +14,24 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HAPG_LVC/sgd_ps.py">
+        <entry file="file://$PROJECT_DIR$/hapg/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+            <state relative-caret-position="2484">
+              <caret line="218" column="35" selection-start-line="218" selection-start-column="25" selection-end-line="218" selection-end-column="35" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#3014#5761#0" />
+                <element signature="e#5791#6830#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/HAPG_LVC/sgd_ps_ad.py">
+        <entry file="file://$PROJECT_DIR$/hapg/algo/hapg_lvc.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/algo/hapg_lvc_adam.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-                <element signature="e#3548#6604#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/algo/vpg_dice.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="46">
-              <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/algo/hapg_lvc.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+            <state relative-caret-position="265">
+              <caret line="68" column="24" lean-forward="true" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -73,28 +40,43 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HAPG_LVC/hapg_ps.py">
+        <entry file="file://$PROJECT_DIR$/hapg/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+            <state relative-caret-position="613">
+              <caret line="117" column="32" lean-forward="true" selection-start-line="117" selection-start-column="32" selection-end-line="117" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HAPG_LVC/sgd.py">
+        <entry file="file://$PROJECT_DIR$/hapg/envs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="14" column="53" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+            <state relative-caret-position="-2208">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HAPG_LVC/hapg_dice.py">
+        <entry file="file://$PROJECT_DIR$/hapg/algo/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="48" lean-forward="true" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="48" />
+            <state relative-caret-position="115">
+              <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hapg/algo/dppo_penalty.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="774">
+              <caret line="66" column="98" selection-start-line="66" selection-start-column="98" selection-end-line="66" selection-end-column="98" />
             </state>
           </provider>
         </entry>
@@ -139,6 +121,7 @@
       <find>num_proc</find>
       <find>needs_reset</find>
       <find>BETA</find>
+      <find>baseline</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -189,11 +172,12 @@
         <option value="$PROJECT_DIR$/HAPG_LVC/sgd.py" />
         <option value="$PROJECT_DIR$/HAPG_LVC/sgd_ps.py" />
         <option value="$PROJECT_DIR$/HAPG_LVC/sgd_ps_ad.py" />
+        <option value="$PROJECT_DIR$/hapg/algo/__init__.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="25" />
+    <option name="y" value="27" />
     <option name="width" value="1210" />
     <option name="height" value="789" />
   </component>
@@ -212,12 +196,13 @@
             <path>
               <item name="hapg_pytorch" type="b2602c69:ProjectViewProjectNode" />
               <item name="hapg_pytorch" type="462c0819:PsiDirectoryNode" />
-              <item name="a2c_ppo_acktr" type="462c0819:PsiDirectoryNode" />
+              <item name="hapg" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hapg_pytorch" type="b2602c69:ProjectViewProjectNode" />
               <item name="hapg_pytorch" type="462c0819:PsiDirectoryNode" />
-              <item name="HAPG_LVC" type="462c0819:PsiDirectoryNode" />
+              <item name="hapg" type="462c0819:PsiDirectoryNode" />
+              <item name="algo" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -418,12 +403,13 @@
       <workItem from="1562914853459" duration="6649000" />
       <workItem from="1563153424099" duration="8298000" />
       <workItem from="1567729145278" duration="352000" />
-      <workItem from="1567735119536" duration="1408000" />
+      <workItem from="1567735119536" duration="1813000" />
+      <workItem from="1567775323820" duration="2259000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71631000" />
+    <option name="totallyTimeSpent" value="74295000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -438,7 +424,7 @@
     <frame x="0" y="25" width="2560" height="1415" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27724743" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13086714" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="File Transfer" order="0" visible="true" weight="0.32831088" />
@@ -450,11 +436,11 @@
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49980292" weight="0.3280507" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4990146" weight="0.27993655" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4990146" weight="0.1411578" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5017738" side_tool="true" weight="0.35233572" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32699922" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32672483" />
       <window_info anchor="right" id="Remote Host" order="0" weight="0.32975337" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -471,11 +457,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/a2c_ppo_acktr/model.py</url>
-          <line>74</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/HAPG_LVC/sgd.py</url>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
@@ -485,7 +466,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/dppo$sgd_ps.coverage" NAME="sgd_ps Coverage Results" MODIFIED="1562910029427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HAPG_LVC" />
     <SUITE FILE_PATH="coverage/hapg_pytorch$sgd_ps.coverage" NAME="sgd_ps Coverage Results" MODIFIED="1563191718584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HAPG_LVC" />
-    <SUITE FILE_PATH="coverage/hapg_pytorch$hapg_dice.coverage" NAME="hapg_dice Coverage Results" MODIFIED="1567735617686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HAPG_LVC" />
+    <SUITE FILE_PATH="coverage/hapg_pytorch$hapg_dice.coverage" NAME="hapg_dice Coverage Results" MODIFIED="1567775788822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HAPG_LVC" />
     <SUITE FILE_PATH="coverage/hapg_pytorch$hapg_ps.coverage" NAME="hapg_ps Coverage Results" MODIFIED="1563195217700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HAPG_LVC" />
     <SUITE FILE_PATH="coverage/pytorch_a2c_ppo_acktr_gail_master$main.coverage" NAME="main Coverage Results" MODIFIED="1557998152558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pytorch_a2c_ppo_acktr_gail_master$dppo_debug.coverage" NAME="dppo_debug Coverage Results" MODIFIED="1558326302992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -538,54 +519,19 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/pyro/infer/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4117">
-          <caret line="193" column="13" selection-start-line="193" selection-start-column="13" selection-end-line="193" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/torch/distributions/normal.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="75" column="16" lean-forward="true" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/baselines/common/vec_env/vec_env.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="955">
-          <caret line="72" column="8" selection-start-line="72" selection-start-column="8" selection-end-line="72" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/single_machine_PPO/single_node_ppo.py" />
-    <entry file="file://$PROJECT_DIR$/enjoy.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generate_tmux_yaml.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LICENSE">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/algo/dppo_penalty.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="809">
-          <caret line="66" column="98" selection-start-line="66" selection-start-column="98" selection-end-line="66" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/enjoy.py" />
+    <entry file="file://$PROJECT_DIR$/generate_tmux_yaml.py" />
+    <entry file="file://$PROJECT_DIR$/LICENSE" />
     <entry file="file://$PROJECT_DIR$/dppo_penalty.py" />
     <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/algo/seperated_dppo.py" />
-    <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/distributions.py">
+    <entry file="file://$PROJECT_DIR$/hapg/distributions.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="575">
           <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/algo/kfac.py">
+    <entry file="file://$PROJECT_DIR$/hapg/algo/kfac.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1104" />
       </provider>
@@ -600,21 +546,14 @@
     <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/torch/optim/__init__.pyi">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/algo/a2c_acktr.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="805">
-          <caret line="47" column="18" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/algo/ppo.py">
+    <entry file="file://$PROJECT_DIR$/hapg/algo/ppo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1518">
           <caret line="69" column="57" selection-start-line="69" selection-start-column="45" selection-end-line="69" selection-end-column="57" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/algo/ppo_penalty.py">
+    <entry file="file://$PROJECT_DIR$/hapg/algo/ppo_penalty.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="92">
           <caret line="45" column="48" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="48" />
@@ -628,7 +567,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/adam.py">
+    <entry file="file://$PROJECT_DIR$/hapg/adam.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
@@ -647,7 +586,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/__init__.py">
+    <entry file="file://$PROJECT_DIR$/hapg/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/baselines/common/vec_env/dummy_vec_env.py">
@@ -664,45 +603,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/algo/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/arguments.py">
+    <entry file="file://$PROJECT_DIR$/hapg/arguments.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="8" column="43" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/envs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="42" column="25" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dppo.py" />
-    <entry file="file://$PROJECT_DIR$/render_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="54" selection-start-line="54" selection-end-line="54" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/render_test.py" />
     <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/baselines/bench/monitor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
@@ -710,30 +619,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/storage.py">
+    <entry file="file://$PROJECT_DIR$/hapg/storage.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="750">
           <caret line="61" column="37" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
-          <caret line="148" column="24" selection-start-line="148" selection-start-column="24" selection-end-line="148" selection-end-column="24" />
-          <folding>
-            <element signature="e#23#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2438">
-          <caret line="114" selection-start-line="114" selection-end-line="114" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py" />
     <entry file="file://$PROJECT_DIR$/vpg_dice.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1633">
@@ -754,37 +647,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HAPG_LVC/hapg_dice_lr.py">
+    <entry file="file://$PROJECT_DIR$/HAPG_LVC/hapg_dice_lr.py" />
+    <entry file="file://$PROJECT_DIR$/HAPG_LVC/sgd_lr.py" />
+    <entry file="file://$PROJECT_DIR$/HAPG_LVC/sgd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="36" column="54" selection-start-line="36" selection-start-column="54" selection-end-line="36" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="184">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HAPG_LVC/sgd_lr.py">
+    <entry file="file://$PROJECT_DIR$/HAPG_LVC/sgd_ps_ad.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-3008">
+          <caret line="15" column="22" lean-forward="true" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/algo/hapg_lvc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/algo/hapg_lvc_adam.py">
+    <entry file="file://$PROJECT_DIR$/hapg/algo/hapg_lvc_adam.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
@@ -795,45 +674,121 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/algo/vpg_dice.py">
+    <entry file="file://$PROJECT_DIR$/HAPG_LVC/sgd_ps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="14" />
+        <state relative-caret-position="460">
+          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HAPG_LVC/hapg_dice.py">
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/baselines/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/baselines/common/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hapg/algo/gail.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="48" lean-forward="true" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="48" />
+        <state>
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HAPG_LVC/hapg_ps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="322">
-          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HAPG_LVC/sgd.py">
+    <entry file="file://$PROJECT_DIR$/hapg/algo/vpg_dice.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="14" column="53" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+        <state relative-caret-position="483">
+          <caret line="23" column="43" lean-forward="true" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HAPG_LVC/sgd_ps.py">
+    <entry file="file://$PROJECT_DIR$/hapg/envs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+        <state relative-caret-position="-2208">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HAPG_LVC/sgd_ps_ad.py">
+    <entry file="file://$PROJECT_DIR$/hapg/algo/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="30" lean-forward="true" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hapg/algo/dppo_penalty.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="66" column="98" selection-start-line="66" selection-start-column="98" selection-end-line="66" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hapg/algo/dppo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hapg/algo/a2c_acktr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HAPG_LVC/hapg_dice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hapg/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2484">
+          <caret line="218" column="35" selection-start-line="218" selection-start-column="25" selection-end-line="218" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#3014#5761#0" />
+            <element signature="e#5791#6830#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hapg/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="613">
+          <caret line="117" column="32" lean-forward="true" selection-start-line="117" selection-start-column="32" selection-end-line="117" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hapg/algo/hapg_lvc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="68" column="24" lean-forward="true" selection-start-line="68" selection-start-column="24" selection-end-line="68" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
