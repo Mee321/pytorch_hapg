@@ -2,171 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="591a2c43-3ba5-4482-a1f2-9a8990834d8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pytorch-a2c-ppo-acktr-gail-master.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pytorch-a2c-ppo-acktr-gail-master.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/visualize-checkpoint.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HAPG_LVC/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HAPG_LVC/1.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HAPG_LVC/2.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HAPG_LVC/3.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HAPG_LVC/4.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HAPG_LVC/5.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HAPG_LVC/6.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HAPG_LVC/7.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HAPG_LVC/8.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/HAPG_LVC/9.monitor.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/HAPG_LVC/hapg_dice.py" beforeDir="false" afterPath="$PROJECT_DIR$/HAPG_LVC/hapg_dice.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HAPG_LVC/hapg_dice_lr.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HAPG_LVC/hapg_ps.py" beforeDir="false" afterPath="$PROJECT_DIR$/HAPG_LVC/hapg_ps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HAPG_LVC/sgd.py" beforeDir="false" afterPath="$PROJECT_DIR$/HAPG_LVC/sgd.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HAPG_LVC/sgd_lr.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/a2c_ppo_acktr/algo/hapg_dice.py" beforeDir="false" afterPath="$PROJECT_DIR$/a2c_ppo_acktr/algo/hapg_dice.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a2c_ppo_acktr/seperated_models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/enjoy.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/evaluation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gail_experts/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gail_experts/convert_to_pytorch.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/generate_tmux_yaml.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/a2c_beamrider.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/a2c_breakout.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/a2c_qbert.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/a2c_seaquest.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/acktr_beamrider.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/acktr_breakout.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/acktr_qbert.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/acktr_seaquest.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/ppo_halfcheetah.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/ppo_hopper.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/ppo_reacher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/imgs/ppo_walker.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/halfcheetah/halfcheetah-0/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/halfcheetah/halfcheetah-1/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/halfcheetah/halfcheetah-2/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/halfcheetah/halfcheetah-3/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/halfcheetah/halfcheetah-4/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/halfcheetah/halfcheetah-5/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/halfcheetah/halfcheetah-6/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/halfcheetah/halfcheetah-7/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/halfcheetah/halfcheetah-8/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/halfcheetah/halfcheetah-9/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/hopper/hopper-0/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/hopper/hopper-1/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/hopper/hopper-2/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/hopper/hopper-3/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/hopper/hopper-4/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/hopper/hopper-5/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/hopper/hopper-6/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/hopper/hopper-7/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/hopper/hopper-8/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/hopper/hopper-9/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/reacher/reacher-0/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/reacher/reacher-1/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/reacher/reacher-2/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/reacher/reacher-3/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/reacher/reacher-4/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/reacher/reacher-5/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/reacher/reacher-6/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/reacher/reacher-7/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/reacher/reacher-8/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/reacher/reacher-9/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/walker2d/walker2d-0/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/walker2d/walker2d-1/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/walker2d/walker2d-2/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/walker2d/walker2d-3/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/walker2d/walker2d-4/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/walker2d/walker2d-5/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/walker2d/walker2d-6/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/walker2d/walker2d-7/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/walker2d/walker2d-8/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/walker2d/walker2d-9/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/render_test.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_all.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/halfcheetah/halfcheetah-0/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/halfcheetah/halfcheetah-1/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/halfcheetah/halfcheetah-2/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/halfcheetah/halfcheetah-3/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/halfcheetah/halfcheetah-4/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/halfcheetah/halfcheetah-5/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/halfcheetah/halfcheetah-6/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/halfcheetah/halfcheetah-7/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/halfcheetah/halfcheetah-8/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/halfcheetah/halfcheetah-9/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/halfcheetah/unfixhalfcheetah-0/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/halfcheetah/unfixhalfcheetah-1/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/halfcheetah/unfixhalfcheetah-2/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/halfcheetah/unfixhalfcheetah-3/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/halfcheetah/unfixhalfcheetah-4/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/halfcheetah/unfixhalfcheetah-5/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/halfcheetah/unfixhalfcheetah-6/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/halfcheetah/unfixhalfcheetah-7/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/halfcheetah/unfixhalfcheetah-8/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/halfcheetah/unfixhalfcheetah-9/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/hopper/hopper-0/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/hopper/hopper-1/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/hopper/hopper-2/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/hopper/hopper-3/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/hopper/hopper-4/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/hopper/hopper-5/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/hopper/hopper-6/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/hopper/hopper-7/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/hopper/hopper-8/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/hopper/hopper-9/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/hopper/unfixhopper-0/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/hopper/unfixhopper-1/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/hopper/unfixhopper-2/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/hopper/unfixhopper-3/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/hopper/unfixhopper-4/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/hopper/unfixhopper-5/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/hopper/unfixhopper-6/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/hopper/unfixhopper-7/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/hopper/unfixhopper-8/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/hopper/unfixhopper-9/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/reacher/reacher-0/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/reacher/reacher-1/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/reacher/reacher-2/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/reacher/reacher-3/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/reacher/reacher-4/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/reacher/reacher-5/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/reacher/reacher-6/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/reacher/reacher-7/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/reacher/reacher-8/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/reacher/reacher-9/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/reacher/unfixreacher-0/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/reacher/unfixreacher-1/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/reacher/unfixreacher-2/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/reacher/unfixreacher-3/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/reacher/unfixreacher-4/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/reacher/unfixreacher-5/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/reacher/unfixreacher-6/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/reacher/unfixreacher-7/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/reacher/unfixreacher-8/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/reacher/unfixreacher-9/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/walker2d/unfixwalker2d-0/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/walker2d/unfixwalker2d-1/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/walker2d/unfixwalker2d-2/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/walker2d/unfixwalker2d-3/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/walker2d/unfixwalker2d-4/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/walker2d/unfixwalker2d-5/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/walker2d/unfixwalker2d-6/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/walker2d/unfixwalker2d-7/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/walker2d/unfixwalker2d-8/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/walker2d/unfixwalker2d-9/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/walker2d/walker2d-0/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/walker2d/walker2d-1/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/walker2d/walker2d-2/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/walker2d/walker2d-3/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/walker2d/walker2d-4/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/walker2d/walker2d-5/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/walker2d/walker2d-6/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/walker2d/walker2d-7/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/walker2d/walker2d-8/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/time_limit_logs/walker2d/walker2d-9/0.monitor.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/visualize.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HAPG_LVC/sgd_ps.py" beforeDir="false" afterPath="$PROJECT_DIR$/HAPG_LVC/sgd_ps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HAPG_LVC/sgd_ps_ad.py" beforeDir="false" afterPath="$PROJECT_DIR$/HAPG_LVC/sgd_ps_ad.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2c_ppo_acktr/algo/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/a2c_ppo_acktr/algo/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2c_ppo_acktr/algo/hapg_dice.py" beforeDir="false" afterPath="$PROJECT_DIR$/a2c_ppo_acktr/algo/hapg_lvc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a2c_ppo_acktr/algo/hapg_dice_adam.py" beforeDir="false" afterPath="$PROJECT_DIR$/a2c_ppo_acktr/algo/hapg_lvc_adam.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -179,11 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HAPG_LVC/sgd_ps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="322">
+              <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -191,20 +32,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/HAPG_LVC/sgd_ps_ad.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-851">
-              <caret line="56" column="29" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state>
+              <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/algo/hapg_dice_adam.py">
+        <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/algo/hapg_lvc_adam.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="874">
-              <caret line="38" column="34" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="34" />
+            <state relative-caret-position="161">
+              <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
                 <element signature="e#3548#6604#0" />
@@ -214,10 +52,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/algo/hapg_dice.py">
+        <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/algo/vpg_dice.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3059">
-              <caret line="133" column="43" selection-start-line="133" selection-start-column="43" selection-end-line="133" selection-end-column="43" />
+            <state relative-caret-position="46">
+              <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/algo/hapg_lvc.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="138">
+              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -228,11 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HAPG_LVC/hapg_ps.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="644">
-              <caret line="40" column="42" lean-forward="true" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="322">
+              <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -240,11 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HAPG_LVC/sgd.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="184">
+              <caret line="14" column="53" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -252,11 +93,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/HAPG_LVC/hapg_dice.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
-              <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-end-line="24" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="322">
+              <caret line="14" column="48" lean-forward="true" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -330,7 +168,6 @@
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/a2c_ppo_acktr/algo/__init__.py" />
         <option value="$PROJECT_DIR$/vpg_dice.py" />
-        <option value="$PROJECT_DIR$/a2c_ppo_acktr/algo/vpg_dice.py" />
         <option value="$PROJECT_DIR$/a2c_ppo_acktr/utils.py" />
         <option value="$PROJECT_DIR$/hapg_dice.py" />
         <option value="$PROJECT_DIR$/a2c_ppo_acktr/algo/adam.py" />
@@ -341,14 +178,17 @@
         <option value="$PROJECT_DIR$/ppo_penalty.py" />
         <option value="$PROJECT_DIR$/render_test.py" />
         <option value="$PROJECT_DIR$/dppo.py" />
+        <option value="$PROJECT_DIR$/a2c_ppo_acktr/algo/hapg_dice.py" />
+        <option value="$PROJECT_DIR$/HAPG_LVC/hapg_dice_lr.py" />
+        <option value="$PROJECT_DIR$/HAPG_LVC/sgd_lr.py" />
+        <option value="$PROJECT_DIR$/a2c_ppo_acktr/algo/hapg_lvc.py" />
+        <option value="$PROJECT_DIR$/a2c_ppo_acktr/algo/hapg_lvc_adam.py" />
+        <option value="$PROJECT_DIR$/a2c_ppo_acktr/algo/vpg_dice.py" />
+        <option value="$PROJECT_DIR$/HAPG_LVC/hapg_dice.py" />
+        <option value="$PROJECT_DIR$/HAPG_LVC/hapg_ps.py" />
+        <option value="$PROJECT_DIR$/HAPG_LVC/sgd.py" />
         <option value="$PROJECT_DIR$/HAPG_LVC/sgd_ps.py" />
         <option value="$PROJECT_DIR$/HAPG_LVC/sgd_ps_ad.py" />
-        <option value="$PROJECT_DIR$/HAPG_LVC/hapg_ps.py" />
-        <option value="$PROJECT_DIR$/a2c_ppo_acktr/algo/hapg_dice.py" />
-        <option value="$PROJECT_DIR$/HAPG_LVC/hapg_dice.py" />
-        <option value="$PROJECT_DIR$/HAPG_LVC/hapg_dice_lr.py" />
-        <option value="$PROJECT_DIR$/HAPG_LVC/sgd.py" />
-        <option value="$PROJECT_DIR$/HAPG_LVC/sgd_lr.py" />
       </list>
     </option>
   </component>
@@ -368,6 +208,11 @@
             <path>
               <item name="hapg_pytorch" type="b2602c69:ProjectViewProjectNode" />
               <item name="hapg_pytorch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hapg_pytorch" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hapg_pytorch" type="462c0819:PsiDirectoryNode" />
+              <item name="a2c_ppo_acktr" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="hapg_pytorch" type="b2602c69:ProjectViewProjectNode" />
@@ -573,12 +418,12 @@
       <workItem from="1562914853459" duration="6649000" />
       <workItem from="1563153424099" duration="8298000" />
       <workItem from="1567729145278" duration="352000" />
-      <workItem from="1567735119536" duration="1103000" />
+      <workItem from="1567735119536" duration="1408000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71326000" />
+    <option name="totallyTimeSpent" value="71631000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -591,6 +436,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="2560" height="1415" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27724743" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -604,7 +450,7 @@
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49980292" weight="0.3280507" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4990146" weight="0.28028503" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4990146" weight="0.27993655" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5017738" side_tool="true" weight="0.35233572" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
@@ -789,13 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/algo/vpg_dice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="45" column="29" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HAPG_LVC/hapg_lvc_adam_lr.py" />
     <entry file="file://$PROJECT_DIR$/HAPG_LVC/hapg_lvc_adam.py" />
     <entry file="file://$PROJECT_DIR$/ppo.sh" />
@@ -915,61 +754,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/algo/hapg_dice_adam.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="38" column="34" selection-start-line="38" selection-start-column="27" selection-end-line="38" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-            <element signature="e#3548#6604#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/algo/hapg_dice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3059">
-          <caret line="133" column="43" selection-start-line="133" selection-start-column="43" selection-end-line="133" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HAPG_LVC/hapg_dice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
-          <caret line="23" column="9" lean-forward="true" selection-start-line="23" selection-end-line="24" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HAPG_LVC/hapg_dice_lr.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
           <caret line="36" column="54" selection-start-line="36" selection-start-column="54" selection-end-line="36" selection-end-column="54" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HAPG_LVC/hapg_ps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="40" column="42" lean-forward="true" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HAPG_LVC/sgd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -986,23 +774,66 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/algo/hapg_lvc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/algo/hapg_lvc_adam.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#3548#6604#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/algo/vpg_dice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="4" column="10" selection-start-line="4" selection-start-column="10" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HAPG_LVC/hapg_dice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="48" lean-forward="true" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HAPG_LVC/hapg_ps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HAPG_LVC/sgd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="14" column="53" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/HAPG_LVC/sgd_ps.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="322">
+          <caret line="14" column="48" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/HAPG_LVC/sgd_ps_ad.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-851">
-          <caret line="56" column="29" selection-start-line="56" selection-start-column="20" selection-end-line="56" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state>
+          <caret line="18" column="44" lean-forward="true" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
         </state>
       </provider>
     </entry>

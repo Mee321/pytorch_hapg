@@ -2,16 +2,15 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 from a2c_ppo_acktr.utils import *
-from a2c_ppo_acktr.adam import Adam_optimizer
 
 # LVC version, DiCE with a bug when denominater becomes 0
-class HAPG_DICE():
+class HAPG_LVC():
     def __init__(self,
                  actor_critic,
                  value_loss_coef,
                  entropy_coef,
-                 lr=3e-4,
-                 lr_inner=3e-4,
+                 lr=None,
+                 lr_inner=None,
                  max_grad_norm=None):
 
         self.actor_critic = actor_critic
@@ -20,9 +19,9 @@ class HAPG_DICE():
         self.lr = lr
         self.max_grad_norm = max_grad_norm
         self.alignment = sum([len(p.view(-1)) for p in list(self.actor_critic.parameters())[4:10]])
+        # value net optimizer
         self.optimizer = optim.Adam(
-            actor_critic.parameters(), lr=lr)
-        self.inner_optimizer = Adam_optimizer(lr_inner, 0.9, 0.99, 1e-8)
+            actor_critic.parameters(), lr=self.lr)
 
     def update(self, rollouts):
         obs_shape = rollouts.obs.size()[2:]
@@ -67,19 +66,19 @@ class HAPG_DICE():
         action_loss = -(advantages.detach() * magic_box).mean()
         # print(torch.autograd.grad(action_loss, self.actor_critic.parameters(), allow_unused=True))
         grad = torch.autograd.grad(action_loss, self.actor_critic.parameters(), allow_unused=True, retain_graph=True)
+        grad = flatten_tuple(grad, self.alignment)
 
         prev_params = get_flat_params_from(self.actor_critic)
+        direction = grad / torch.norm(grad)
+        updated_params = prev_params - self.lr * direction
+        d_theta = updated_params - prev_params
+        set_flat_params_to(self.actor_critic, updated_params)
 
         self.optimizer.zero_grad()
-        (value_loss * self.value_loss_coef + action_loss -
-         dist_entropy * self.entropy_coef).backward()
-
+        value_loss.backward()
         self.optimizer.step()
 
-        updated_params = get_flat_params_from(self.actor_critic)
-        d_theta = updated_params - prev_params
-
-        return value_loss.item(), action_loss.item(), dist_entropy.item(), flatten_tuple(grad, self.alignment), d_theta
+        return value_loss.item(), action_loss.item(), dist_entropy.item(), grad, d_theta
 
     def inner_update(self, rollouts, prev_grad, d_theta):
         obs_shape = rollouts.obs.size()[2:]
@@ -132,9 +131,8 @@ class HAPG_DICE():
 
         # update params
         prev_params = get_flat_params_from(self.actor_critic)
-        # direction = grad / torch.norm(grad)
-        direction = self.inner_optimizer.update(grad)
-        updated_params = prev_params - direction
+        direction = grad / torch.norm(grad)
+        updated_params = prev_params - self.lr * direction
         d_theta = updated_params - prev_params
         set_flat_params_to(self.actor_critic, updated_params)
 

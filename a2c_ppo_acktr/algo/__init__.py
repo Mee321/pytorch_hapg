@@ -3,4 +3,4 @@ from .ppo import PPO
 from .dppo import DPPO
 from .ppo_penalty import PPO_Penalty
 from .vpg_dice import VPG_DICE
-from .hapg_dice import HAPG_DICE
+from .hapg_lvc import HAPG_DICE

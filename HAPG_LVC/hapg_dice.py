@@ -12,7 +12,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 
-from a2c_ppo_acktr.algo.hapg_dice import HAPG_DICE
+from a2c_ppo_acktr.algo.hapg_lvc import HAPG_LVC
 from a2c_ppo_acktr.utils import *
 from a2c_ppo_acktr.algo import gail
 from a2c_ppo_acktr.arguments import get_args
