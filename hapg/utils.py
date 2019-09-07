@@ -108,6 +108,16 @@ def get_flat_grad_from(net, grad_grad=False):
     flat_grad = torch.cat(grads)
     return flat_grad
 
+def get_ndarrays_from_flat(vec, net):
+    ndarrays = []
+    prev_ind = 0
+    for param in net.parameters():
+        flat_size = int(np.prod(list(param.size())))
+        ndarray = vec[prev_ind:prev_ind + flat_size].view(param.size())
+        ndarrays.append(ndarray)
+
+    return ndarrays
+
 def flatten_tuple(grads, align):
     flat_grads = []
     for i in range(4):

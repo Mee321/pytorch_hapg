@@ -12,6 +12,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 
+
 from hapg.algo.hapg_lvc import HAPG_LVC
 from hapg.utils import *
 from hapg.algo import gail
@@ -21,21 +22,22 @@ from hapg.model import Policy
 from hapg.storage import RolloutStorage
 
 GAMMA = 0.995
-LR = 3e-3
+LR = 3e-2
 BATCH_SIZE = 32
 NUM_EPOC = 10
 BETA = 0.2
 TARGET = 0.01
 SEED = 1
 CUDA = True
-ENV_NAME = "Walker2d-v2"
+ENV_NAME = "Humanoid-v2"
 outer_batch = 10000
 inner_batch = 1000
 num_inner = 10
 
 for SEED in [11, 21]:
     for ENV_NAME in ["HalfCheetah-v2", "Walker2d-v2", "Hopper-v2", "Humanoid-v2"]:
-        logdir = "./HAPG_LVC/%s/batchsize%d_innersize%d_seed%d_lr%f"%(str(ENV_NAME),outer_batch, inner_batch, SEED, LR)
+        logdir = "./HAPG_LVC/%s/batchsize%d_innersize%d_seed%d_lr%f" % (
+        str(ENV_NAME), outer_batch, inner_batch, SEED, LR)
         writer = SummaryWriter(log_dir=logdir)
         torch.manual_seed(SEED)
         torch.cuda.manual_seed_all(SEED)
@@ -44,28 +46,23 @@ for SEED in [11, 21]:
         device = torch.device("cuda:0" if CUDA else "cpu")
 
         envs = make_vec_envs(ENV_NAME, SEED, 1,
-                         GAMMA, "./", device, False)
+                             GAMMA, "./", device, False)
 
-        actor_critic = Policy(
-        envs.observation_space.shape,
-        envs.action_space,
-        base_kwargs={'recurrent': False})
+        actor_critic = Policy(envs.observation_space.shape, envs.action_space, base_kwargs={'recurrent': False})
         actor_critic.to(device)
 
-
-
-        agent = HAPG_DICE(
+        agent = HAPG_LVC(
             actor_critic,
             0.5,
             0.0,
             lr=LR)
 
         rollouts = RolloutStorage(outer_batch, 1,
-                              envs.observation_space.shape, envs.action_space,
-                              actor_critic.recurrent_hidden_state_size)
+                                  envs.observation_space.shape, envs.action_space,
+                                  actor_critic.recurrent_hidden_state_size)
         rollouts_inner = RolloutStorage(inner_batch, 1,
-                              envs.observation_space.shape, envs.action_space,
-                              actor_critic.recurrent_hidden_state_size)
+                                        envs.observation_space.shape, envs.action_space,
+                                        actor_critic.recurrent_hidden_state_size)
 
         obs = envs.reset()
         rollouts.obs[0].copy_(obs)
@@ -78,7 +75,7 @@ for SEED in [11, 21]:
         total_num_steps = 0
 
         for j in count():
-        # sample
+            # sample
             for step in range(outer_batch):
                 # Sample actions
                 with torch.no_grad():
@@ -120,7 +117,7 @@ for SEED in [11, 21]:
 
             for inner_update in range(num_inner):
                 a = np.random.uniform()
-                mix_params = a*prev_params + (1-a)*cur_params
+                mix_params = a * prev_params + (1 - a) * cur_params
                 set_flat_params_to(actor_critic, mix_params)
                 for step in range(inner_batch):
                     # Sample actions
@@ -141,7 +138,7 @@ for SEED in [11, 21]:
                         [[0.0] if 'bad_transition' in info.keys() else [1.0]
                          for info in infos])
                     rollouts_inner.insert(obs, recurrent_hidden_states, action,
-                                    action_log_prob, value, reward, masks, bad_masks)
+                                          action_log_prob, value, reward, masks, bad_masks)
 
                 with torch.no_grad():
                     next_value = actor_critic.get_value(
@@ -150,7 +147,7 @@ for SEED in [11, 21]:
 
                 # process sample
                 rollouts_inner.compute_returns(next_value, True, 0.99,
-                                         0.97, True)
+                                               0.97, True)
                 # compute updated params
                 set_flat_params_to(actor_critic, cur_params)
                 prev_params = cur_params
@@ -166,10 +163,10 @@ for SEED in [11, 21]:
             if j % 1 == 0 and len(episode_rewards) > 1:
                 print(
                     "Updates {}, num timesteps {}\n Last {} training episodes: mean/median reward {:.1f}/{:.1f}, min/max reward {:.1f}/{:.1f}\n"
-                    .format(j, total_num_steps,
-                            len(episode_rewards), np.mean(episode_rewards),
-                            np.median(episode_rewards), np.min(episode_rewards),
-                            np.max(episode_rewards), dist_entropy, value_loss,
-                            action_loss))
+                        .format(j, total_num_steps,
+                                len(episode_rewards), np.mean(episode_rewards),
+                                np.median(episode_rewards), np.min(episode_rewards),
+                                np.max(episode_rewards), dist_entropy, value_loss,
+                                action_loss))
             if total_num_steps > 3e6:
                 break

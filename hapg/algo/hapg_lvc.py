@@ -3,7 +3,7 @@ import torch.nn as nn
 import torch.optim as optim
 from hapg.utils import *
 
-# LVC version, DiCE with a bug when denominater becomes 0
+# LVC version, DiCE with a bug when denominator becomes 0
 class HAPG_LVC():
     def __init__(self,
                  actor_critic,
