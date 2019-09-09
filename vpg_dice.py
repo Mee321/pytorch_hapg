@@ -53,7 +53,7 @@ agent = VPG_DICE(
         actor_critic,
         0.5,
         0.0,
-        lr=0.001)
+        lr=LR)
 
 rollouts = RolloutStorage(5000, 1,
                           envs.observation_space.shape, envs.action_space,
