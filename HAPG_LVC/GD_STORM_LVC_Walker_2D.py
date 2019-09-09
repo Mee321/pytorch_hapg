@@ -22,7 +22,7 @@ from hapg.storage import RolloutStorage
 
 GAMMA = 0.995
 LR_CRITIC = 3e-3
-LR_ACTOR_INITIAL = 3e-3
+LR_ACTOR_INITIAL = 0.03
 ALPHA_INITIAL = 1
 ALPHA_EXP = 2 / 3
 BATCH_SIZE = 32
@@ -37,7 +37,7 @@ inner_batch = 1000
 num_inner = 10000
 
 for SEED in [11, 21]:
-    for ENV_NAME in ["HalfCheetah-v2", "Walker2d-v2", "Hopper-v2", "Humanoid-v2"]:
+    for ENV_NAME in ["HalfCheetah-v2"]:
         logdir = "./GD_STORM_LVC/%s/batchsize%d_innersize%d_seed%d_lrcritic%f_lractorinit%f" % (
             str(ENV_NAME), outer_batch, inner_batch, SEED, LR_CRITIC, LR_ACTOR_INITIAL)
         writer = SummaryWriter(log_dir=logdir)

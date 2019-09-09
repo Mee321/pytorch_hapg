@@ -129,3 +129,10 @@ def flatten_tuple(grads, align):
             flat_grads.append(grads[i].view(-1))
     flat_grad = torch.cat(flat_grads)
     return flat_grad
+
+def flatten(grads):
+    flat_grads = []
+    for grad in grads:
+        flat_grads.append(grad.view(-1))
+    flat_grads = torch.cat(flat_grads)
+    return flat_grads

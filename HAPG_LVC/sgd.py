@@ -21,7 +21,7 @@ from hapg.model import Policy
 from hapg.storage import RolloutStorage
 
 GAMMA = 0.995
-LR = 3e-3
+LR = 0.003
 BATCH_SIZE = 32
 NUM_EPOC = 10
 BETA = 0.2
@@ -29,16 +29,16 @@ TARGET = 0.01
 SEED = 1
 CUDA = True
 ENV_NAME = "Hopper-v2"
-outer_batch = 10000
+outer_batch = 1000
 inner_batch = 1000
 num_inner = 10
 for SEED in [11, 21]:
-    for ENV_NAME in ["HalfCheetah-v2", "Walker2d-v2", "Hopper-v2", "Humanoid-v2"]:
+    for ENV_NAME in ["HalfCheetah-v2"]:
         for num_inner in [0]:
             if num_inner == 10:
                 logdir = "./HAPG_LVC_adam/%s/batchsize%d_innersize%d_seed%d_lr%f"%(str(ENV_NAME),outer_batch, inner_batch, SEED, LR)
             elif num_inner == 0:
-                outer_batch = 5000
+                outer_batch = 1000
                 logdir = "./SGD/%s/batchsize%d_innersize%d_seed%d_lr%f"%(str(ENV_NAME),outer_batch, inner_batch, SEED, LR)
             writer = SummaryWriter(log_dir=logdir)
             torch.manual_seed(SEED)
@@ -58,7 +58,7 @@ for SEED in [11, 21]:
 
 
 
-            agent = HAPG_DICE(
+            agent = HAPG_LVC(
                     actor_critic,
                     0.5,
                     0.0,

@@ -22,7 +22,7 @@ from hapg.storage import RolloutStorage
 
 GAMMA = 0.995
 LR_CRITIC = 3e-3
-LR_ACTOR_INITIAL = 3e-2
+LR_ACTOR_INITIAL = 0.0003
 ALPHA_INITIAL = 1
 ALPHA_EXP = 2 / 3
 BATCH_SIZE = 32
@@ -93,6 +93,7 @@ for SEED in [11, 21]:
                     rollouts.masks[step])
 
             # Obser reward and next obs
+            print(recurrent_hidden_states)
             obs, reward, done, infos = envs.step(action)
             for info in infos:
                 if 'episode' in info.keys():
