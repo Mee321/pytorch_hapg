@@ -9,19 +9,20 @@ class HAPG_LVC():
                  actor_critic,
                  value_loss_coef,
                  entropy_coef,
-                 lr=None,
+                 critic_lr=None,
+                 actor_lr=None,
                  lr_inner=None,
                  max_grad_norm=None):
 
         self.actor_critic = actor_critic
         self.value_loss_coef = value_loss_coef
         self.entropy_coef = entropy_coef
-        self.lr = lr
+        self.actor_lr = actor_lr
         self.max_grad_norm = max_grad_norm
         self.alignment = sum([len(p.view(-1)) for p in list(self.actor_critic.parameters())[4:10]])
         # value net optimizer
         self.optimizer = optim.Adam(
-            actor_critic.parameters(), lr=self.lr)
+            actor_critic.parameters(), lr=critic_lr)
 
     def update(self, rollouts):
         obs_shape = rollouts.obs.size()[2:]
@@ -70,7 +71,7 @@ class HAPG_LVC():
 
         prev_params = get_flat_params_from(self.actor_critic)
         direction = grad / torch.norm(grad)
-        updated_params = prev_params - self.lr * direction
+        updated_params = prev_params - self.actor_lr * direction
         d_theta = updated_params - prev_params
         set_flat_params_to(self.actor_critic, updated_params)
 
@@ -132,7 +133,7 @@ class HAPG_LVC():
         # update params
         prev_params = get_flat_params_from(self.actor_critic)
         direction = grad / torch.norm(grad)
-        updated_params = prev_params - self.lr * direction
+        updated_params = prev_params - self.actor_lr * direction
         d_theta = updated_params - prev_params
         set_flat_params_to(self.actor_critic, updated_params)
 

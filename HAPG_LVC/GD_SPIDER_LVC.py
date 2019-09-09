@@ -22,21 +22,21 @@ from hapg.model import Policy
 from hapg.storage import RolloutStorage
 
 GAMMA = 0.995
-LR = 3e-2
-BATCH_SIZE = 32
+ACTOR_LR = 0.03
+CRITIC_LR = 0.03
 NUM_EPOC = 10
 BETA = 0.2
 TARGET = 0.01
 SEED = 1
 CUDA = True
-ENV_NAME = "Humanoid-v2"
-outer_batch = 10000
+ENV_NAME = "HalfCheetah-v2"
+outer_batch = 1000
 inner_batch = 1000
-num_inner = 10
+num_inner = 0
 
 
 logdir = "./HAPG_LVC/%s/batchsize%d_innersize%d_seed%d_lr%f" % (
-str(ENV_NAME), outer_batch, inner_batch, SEED, LR)
+str(ENV_NAME), outer_batch, inner_batch, SEED, ACTOR_LR)
 writer = SummaryWriter(log_dir=logdir)
 torch.manual_seed(SEED)
 np.random.seed(SEED)
@@ -55,7 +55,8 @@ agent = HAPG_LVC(
     actor_critic,
     0.5,
     0.0,
-    lr=LR)
+    actor_lr=ACTOR_LR,
+    critic_lr=CRITIC_LR)
 
 rollouts = RolloutStorage(outer_batch, 1,
                           envs.observation_space.shape, envs.action_space,
@@ -112,6 +113,7 @@ for j in count():
     cur_params = get_flat_params_from(actor_critic)
     rollouts.after_update()
     total_num_steps += outer_batch
+    print(total_num_steps, np.mean(episode_rewards))
     writer.add_scalar("Avg_return", np.mean(episode_rewards), total_num_steps)
     writer.add_scalar("grad_norm", torch.norm(grad), total_num_steps)
 

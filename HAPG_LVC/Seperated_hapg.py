@@ -24,16 +24,16 @@ from hapg.storage import RolloutStorage
 
 GAMMA = 0.995
 ACTOR_LR = 3e-2
-CRITIC_LR = 3e-3
+CRITIC_LR = 3e-2
 NUM_EPOC = 10
 BETA = 0.2
 TARGET = 0.01
 SEED = 1
 CUDA = True
 ENV_NAME = "HalfCheetah-v2"
-outer_batch = 10000
+outer_batch = 1000
 inner_batch = 1000
-num_inner = 10
+num_inner = 0
 
 
 logdir = "./HAPG_LVC/%s/batchsize%d_innersize%d_seed%d_lr%f" % (
@@ -84,7 +84,6 @@ for j in count():
     for step in range(outer_batch):
         # Sample actions
         with torch.no_grad():
-            # TODO
             value = critic(rollouts.obs[step])
             action, action_log_prob, dist_entropy = actor.act(rollouts.obs[step])
         # Obser reward and next obs
@@ -114,13 +113,13 @@ for j in count():
     cur_params = get_flat_params_from(actor)
     rollouts.after_update()
     total_num_steps += outer_batch
+    print(total_num_steps, np.mean(episode_rewards))
     writer.add_scalar("Avg_return", np.mean(episode_rewards), total_num_steps)
     writer.add_scalar("grad_norm", torch.norm(grad), total_num_steps)
 
     for inner_update in range(num_inner):
         a = np.random.uniform()
         mix_params = a * prev_params + (1 - a) * cur_params
-        # TODO
         set_flat_params_to(actor, mix_params)
         for step in range(inner_batch):
             # Sample actions
@@ -143,18 +142,15 @@ for j in count():
                                   action_log_prob, value, reward, masks, bad_masks)
 
         with torch.no_grad():
-            # TODO
             next_value = critic.get_value(rollouts.obs[-1]).detach()
         # process sample
         rollouts_inner.compute_returns(next_value, True, 0.99,
                                        0.97, True)
         # compute updated params
-        # TODO
         set_flat_params_to(actor, cur_params)
         prev_params = cur_params
         value_loss, action_loss, dist_entropy, grad, d_theta = agent.inner_update(rollouts_inner, grad, d_theta)
         rollouts_inner.after_update()
-        # TODO
         cur_params = get_flat_params_from(actor)
 
         total_num_steps += inner_batch

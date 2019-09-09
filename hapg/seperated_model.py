@@ -18,6 +18,8 @@ class Policy(nn.Module):
         self.dist = DiagGaussian(hidden_size, num_outputs)
         self.affine1 = nn.Linear(num_inputs, hidden_size)
         self.affine2 = nn.Linear(hidden_size, hidden_size)
+        torch.nn.init.orthogonal_(self.affine1.weight)
+        torch.nn.init.orthogonal_(self.affine2.weight)
 
     def act(self, inputs, deterministic=False):
         actor_features = self.forward(inputs)
@@ -48,6 +50,9 @@ class Value(nn.Module):
         self.affine1 = nn.Linear(num_inputs, hidden_size)
         self.affine2 = nn.Linear(hidden_size, hidden_size)
         self.value_head = nn.Linear(hidden_size, 1)
+        torch.nn.init.orthogonal_(self.affine1.weight)
+        torch.nn.init.orthogonal_(self.affine2.weight)
+        torch.nn.init.orthogonal_(self.value_head.weight)
 
     def forward(self, x):
         x = torch.tanh(self.affine1(x))
