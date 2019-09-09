@@ -35,25 +35,9 @@ class HAPG_LVC():
             rollouts.obs[:-1].view(-1, *obs_shape),
             rollouts.actions.view(-1, action_shape))
 
-        rewards = rollouts.rewards
         values = values.view(num_steps, num_processes, 1)
         action_log_probs = action_log_probs.view(num_steps, num_processes, 1)
 
-        # probs = torch.exp(action_log_probs)
-        # acc = probs[0]
-        # prob_acc = torch.autograd.Variable(torch.zeros_like(action_log_probs))
-        # for i in range(len(probs)):
-        #     if i != 0:
-        #         acc = acc * probs[i] if rollouts.masks[i - 1] != 0 else probs[i]
-        #     prob_acc[i] = acc
-
-        # acc = action_log_probs[0]
-        # prob_acc = torch.autograd.Variable(torch.zeros_like(action_log_probs))
-        # for i in range(len(action_log_probs)):
-        #     if i != 0:
-        #         acc = acc + action_log_probs[i] if rollouts.masks[i - 1] != 0 else action_log_probs[i]
-        #     prob_acc[i] = acc
-        # prob_acc = torch.exp(prob_acc)
         advantages = rollouts.returns[:-1] - values
         value_loss = advantages.pow(2).mean()
         advantages = (advantages - advantages.mean()) / (
@@ -61,10 +45,7 @@ class HAPG_LVC():
         probs = torch.exp(action_log_probs)
 
         magic_box = probs/probs.detach()
-        # action_loss = -(rollouts.returns[:-1] * action_log_probs).mean()
-        # action_loss = -(prob_acc * rewards).mean()
         action_loss = -(advantages.detach() * magic_box).mean()
-        # print(torch.autograd.grad(action_loss, self.actor_critic.parameters(), allow_unused=True))
         grad = torch.autograd.grad(action_loss, self.actor.parameters(), retain_graph=True)
         grad = flatten(grad)
 
@@ -78,7 +59,7 @@ class HAPG_LVC():
         value_loss.backward()
         self.optimizer.step()
 
-        return value_loss.item(), action_loss.item(), dist_entropy.item(), grad, d_theta
+        return value_loss.item(), action_loss.item(), None, grad, d_theta
 
     def inner_update(self, rollouts, prev_grad, d_theta):
         obs_shape = rollouts.obs.size()[2:]
@@ -90,25 +71,8 @@ class HAPG_LVC():
             rollouts.obs[:-1].view(-1, *obs_shape),
             rollouts.actions.view(-1, action_shape))
 
-        rewards = rollouts.rewards
         values = values.view(num_steps, num_processes, 1)
         action_log_probs = action_log_probs.view(num_steps, num_processes, 1)
-
-        # probs = torch.exp(action_log_probs)
-        # acc = probs[0]
-        # prob_acc = torch.autograd.Variable(torch.zeros_like(action_log_probs))
-        # for i in range(len(probs)):
-        #     if i != 0:
-        #         acc = acc * probs[i] if rollouts.masks[i - 1] != 0 else probs[i]
-        #     prob_acc[i] = acc
-
-        acc = action_log_probs[0]
-        prob_acc = torch.autograd.Variable(torch.zeros_like(action_log_probs))
-        for i in range(len(action_log_probs)):
-            if i != 0:
-                acc = acc + action_log_probs[i] if rollouts.masks[i - 1] != 0 else action_log_probs[i]
-            prob_acc[i] = acc
-        prob_acc = torch.exp(prob_acc)
         advantages = rollouts.returns[:-1] - values
         value_loss = advantages.pow(2).mean()
         advantages = (advantages - advantages.mean()) / (
@@ -116,13 +80,9 @@ class HAPG_LVC():
         probs = torch.exp(action_log_probs)
 
         magic_box = probs / probs.detach()
-        # action_loss = -(rollouts.returns[:-1] * action_log_probs).mean()
-        # action_loss = -(magic_box * rewards).mean()
-        # action_loss = -(prob_acc * rewards).mean()
         action_loss = -(magic_box * advantages.detach()).mean()
         jacob = torch.autograd.grad(action_loss, self.actor.parameters(), retain_graph=True, create_graph=True)
         jacob = flatten(jacob)
-        # print(jacob.shape, d_theta.shape)
         product = torch.dot(jacob, d_theta)
         d_grad = torch.autograd.grad(product, self.actor.parameters(), retain_graph=True)
         grad = prev_grad + flatten(d_grad)
@@ -141,4 +101,4 @@ class HAPG_LVC():
         value_loss.backward()
         self.optimizer.step()
 
-        return value_loss.item(), action_loss.item(), dist_entropy.item(), grad, d_theta
+        return value_loss.item(), action_loss.item(), None, grad, d_theta

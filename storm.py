@@ -19,12 +19,13 @@ from hapg.algo import gail
 from hapg.arguments import get_args
 from hapg.envs import make_vec_envs
 from hapg.model import Policy
-from hapg.seperated_model import *
+from hapg.seperated_model_consistent import *
+from hapg.model import Policy
 from hapg.storage import RolloutStorage
 
 GAMMA = 0.995
 ACTOR_LR = 0.03
-CRITIC_LR = 0.003
+CRITIC_LR = 0.03
 SEED = 1
 CUDA = True
 ENV_NAME = "HalfCheetah-v2"
@@ -46,8 +47,20 @@ device = torch.device("cuda:0" if CUDA else "cpu")
 envs = make_vec_envs(ENV_NAME, SEED, 1,
                      GAMMA, "./", device, False)
 
-actor = Policy(envs.observation_space.shape[0], envs.action_space.shape[0], hidden_size=64)
-critic = Value(envs.observation_space.shape[0], hidden_size=64)
+actor_critic = Policy(envs.observation_space.shape, envs.action_space, base_kwargs={'recurrent': False})
+actor = Actor(envs.observation_space.shape[0], envs.action_space.shape[0], hidden_size=64)
+critic = Critic(envs.observation_space.shape[0], hidden_size=64)
+
+# copy ac to a and c
+actor_params_1 = get_flat_params_from(actor_critic.base.actor)
+actor_params_2 = get_flat_params_from(actor_critic.dist)
+critic_params_1 = get_flat_params_from(actor_critic.base.critic)
+critic_params_2 = get_flat_params_from(actor_critic.base.critic_linear)
+actor_params = torch.cat([actor_params_1, actor_params_2])
+critic_params = torch.cat([critic_params_1, critic_params_2])
+set_flat_params_to(actor, actor_params)
+set_flat_params_to(critic, critic_params)
+
 actor.to(device)
 critic.to(device)
 
