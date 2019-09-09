@@ -24,10 +24,10 @@ from hapg.storage import RolloutStorage
 
 GAMMA = 0.995
 ACTOR_LR = 0.03
-CRITIC_LR = 0.03
+CRITIC_LR = 0.003
 SEED = 1
 CUDA = True
-ENV_NAME = "Walker2d-v2"
+ENV_NAME = "HalfCheetah-v2"
 outer_batch = 1000
 inner_batch = 1000
 num_inner = 10
@@ -167,13 +167,5 @@ for j in count():
                             action_loss))
             print("grad_sq_norm_cum {}\n".format(agent.grad_norm_sq_cum))
 
-    if j % 1 == 0 and len(episode_rewards) > 1:
-        print(
-            "Updates {}, num timesteps {}\n Last {} training episodes: mean/median reward {:.1f}/{:.1f}, min/max reward {:.1f}/{:.1f}\n"
-                .format(j, total_num_steps,
-                        len(episode_rewards), np.mean(episode_rewards),
-                        np.median(episode_rewards), np.min(episode_rewards),
-                        np.max(episode_rewards), dist_entropy, value_loss,
-                        action_loss))
     if total_num_steps > 3e6:
         break

@@ -2,19 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="591a2c43-3ba5-4482-a1f2-9a8990834d8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/exp/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hapg.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hapg/algo/seperated_storm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nsgd.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sgd.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/storm.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HAPG_LVC/GD_STORM_LVC_Hopper.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HAPG_LVC/GD_STORM_LVC_Swimmer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0.monitor.csv" beforeDir="false" afterPath="$PROJECT_DIR$/0.monitor.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HAPG_LVC/0.monitor.csv" beforeDir="false" afterPath="$PROJECT_DIR$/HAPG_LVC/0.monitor.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HAPG_LVC/GD_STORM_LVC.py" beforeDir="false" afterPath="$PROJECT_DIR$/HAPG_LVC/GD_STORM_LVC.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HAPG_LVC/GD_STORM_LVC/Walker2d-v2/batchsize1000_innersize1000_seed11_lrcritic0.003000_lractorinit0.003000/events.out.tfevents.1567996222.mi-All-Series" beforeDir="false" afterPath="$PROJECT_DIR$/HAPG_LVC/GD_STORM_LVC/Walker2d-v2/batchsize1000_innersize1000_seed11_lrcritic0.003000_lractorinit0.003000/events.out.tfevents.1567996222.mi-All-Series" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HAPG_LVC/HAPG_LVC/HalfCheetah-v2/batchsize1000_innersize1000_seed1_lr0.030000/events.out.tfevents.1567996377.mi-All-Series" beforeDir="false" afterPath="$PROJECT_DIR$/HAPG_LVC/HAPG_LVC/HalfCheetah-v2/batchsize1000_innersize1000_seed1_lr0.030000/events.out.tfevents.1567996377.mi-All-Series" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HAPG_LVC/HAPG_LVC/HalfCheetah-v2/batchsize1000_innersize1000_seed1_lr0.030000/events.out.tfevents.1567996688.mi-All-Series" beforeDir="false" afterPath="$PROJECT_DIR$/HAPG_LVC/HAPG_LVC/HalfCheetah-v2/batchsize1000_innersize1000_seed1_lr0.030000/events.out.tfevents.1567996688.mi-All-Series" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vpg_dice.py" beforeDir="false" afterPath="$PROJECT_DIR$/vpg_dice.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HAPG_LVC/GD_STORM_LVC/Walker2d-v2/batchsize1000_innersize1000_seed1_lrcritic0.030000_lractorinit0.030000/events.out.tfevents.1568016564.mi-All-Series" beforeDir="false" afterPath="$PROJECT_DIR$/HAPG_LVC/GD_STORM_LVC/Walker2d-v2/batchsize1000_innersize1000_seed1_lrcritic0.030000_lractorinit0.030000/events.out.tfevents.1568016564.mi-All-Series" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HAPG_LVC/sgd.py" beforeDir="false" afterPath="$PROJECT_DIR$/HAPG_LVC/sgd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/STORM_LVC/Walker2d-v2/batchsize1000_innersize1000_seed1_lr0.030000/events.out.tfevents.1568016555.mi-All-Series" beforeDir="false" afterPath="$PROJECT_DIR$/STORM_LVC/Walker2d-v2/batchsize1000_innersize1000_seed1_lr0.030000/events.out.tfevents.1568016555.mi-All-Series" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exp/0.monitor.csv" beforeDir="false" afterPath="$PROJECT_DIR$/exp/0.monitor.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hapg/algo/seperated_storm.py" beforeDir="false" afterPath="$PROJECT_DIR$/hapg/algo/seperated_storm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hapg/seperated_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/hapg/seperated_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nsgd.py" beforeDir="false" afterPath="$PROJECT_DIR$/nsgd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storm.py" beforeDir="false" afterPath="$PROJECT_DIR$/storm.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,46 +26,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hapg/algo/seperated_storm.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1444">
-              <caret line="164" column="45" selection-start-line="164" selection-start-column="34" selection-end-line="164" selection-end-column="45" />
-              <folding>
-                <element signature="e#0#12#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/storm.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hapg/utils.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="981">
-              <caret line="132" column="4" selection-start-line="132" selection-start-column="4" selection-end-line="132" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hapg/seperated_model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="54" column="33" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
+            <state relative-caret-position="322">
+              <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -73,10 +38,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HAPG_LVC/GD_STORM_LVC.py">
+        <entry file="file://$PROJECT_DIR$/hapg/algo/seperated_storm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+            <state relative-caret-position="46">
+              <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+              <folding>
+                <element signature="e#2783#3955#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/storm.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="446">
+              <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -95,8 +72,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>envs</find>
-      <find>eval</find>
       <find>num-step</find>
       <find>agent</find>
       <find>policy</find>
@@ -125,6 +100,8 @@
       <find>dist</find>
       <find>BATCH_SIZE</find>
       <find>cum</find>
+      <find>Diag</find>
+      <find>sample</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -133,8 +110,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/a2c_ppo_acktr/algo/dppo_debug.py" />
-        <option value="$PROJECT_DIR$/dppo_debug.py" />
         <option value="$PROJECT_DIR$/a2c_ppo_acktr/algo/ppo.py" />
         <option value="$PROJECT_DIR$/a2c_ppo_acktr/algo/dppo.py" />
         <option value="$PROJECT_DIR$/dppo_penalty.py" />
@@ -167,7 +142,6 @@
         <option value="$PROJECT_DIR$/HAPG_LVC/sgd_ps.py" />
         <option value="$PROJECT_DIR$/HAPG_LVC/sgd_ps_ad.py" />
         <option value="$PROJECT_DIR$/HAPG_LVC/GD_STORM_LVC_Walker_2D.py" />
-        <option value="$PROJECT_DIR$/HAPG_LVC/sgd.py" />
         <option value="$PROJECT_DIR$/HAPG_LVC/GD_STORM_LVC_lr.py" />
         <option value="$PROJECT_DIR$/hapg/utils.py" />
         <option value="$PROJECT_DIR$/HAPG_LVC/Seperate_model.py" />
@@ -177,13 +151,16 @@
         <option value="$PROJECT_DIR$/HAPG_LVC/GD_SPIDER_LVC.py" />
         <option value="$PROJECT_DIR$/HAPG_LVC/Seperated_hapg.py" />
         <option value="$PROJECT_DIR$/9.9/hc/hapg.py" />
-        <option value="$PROJECT_DIR$/nsgd.py" />
         <option value="$PROJECT_DIR$/vpg_dice.py" />
         <option value="$PROJECT_DIR$/hapg.py" />
+        <option value="$PROJECT_DIR$/nsgd.py" />
+        <option value="$PROJECT_DIR$/HAPG_LVC/sgd.py" />
         <option value="$PROJECT_DIR$/HAPG_LVC/GD_STORM_LVC.py" />
+        <option value="$PROJECT_DIR$/HAPG_LVC/GD_STORM_LVC_Hopper.py" />
+        <option value="$PROJECT_DIR$/HAPG_LVC/GD_STORM_LVC_Swimmer.py" />
+        <option value="$PROJECT_DIR$/hapg/seperated_model.py" />
         <option value="$PROJECT_DIR$/hapg/algo/seperated_storm.py" />
         <option value="$PROJECT_DIR$/storm.py" />
-        <option value="$PROJECT_DIR$/hapg/seperated_model.py" />
       </list>
     </option>
   </component>
@@ -224,16 +201,16 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/hapg/algo/storm_lvc.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/HAPG_LVC" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/hapg/algo/storm_lvc.py" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/HAPG_LVC" />
       <recent name="$PROJECT_DIR$/hapg/algo" />
       <recent name="$PROJECT_DIR$/exp" />
       <recent name="$PROJECT_DIR$/9.9/hc" />
-      <recent name="$PROJECT_DIR$/HAPG_LVC" />
       <recent name="$PROJECT_DIR$/a2c_ppo_acktr/algo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -256,8 +233,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.GD_STORM_LVC">
-    <configuration name="GD_STORM_LVC" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.storm">
+    <configuration name="GD_STORM_LVC_Hopper" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pytorch-a2c-ppo-acktr-gail-master" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -270,7 +247,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HAPG_LVC/GD_STORM_LVC.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HAPG_LVC/GD_STORM_LVC_Hopper.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -279,7 +256,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Seperate_model" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="GD_STORM_LVC_Swimmer" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pytorch-a2c-ppo-acktr-gail-master" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -292,7 +269,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HAPG_LVC/Seperated_hapg.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/HAPG_LVC/GD_STORM_LVC_Swimmer.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -301,7 +278,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="hapg (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="seperated_model" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pytorch-a2c-ppo-acktr-gail-master" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -309,12 +286,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/hapg" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hapg.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hapg/seperated_model.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -323,7 +300,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="nsgd" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="seperated_storm" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="pytorch-a2c-ppo-acktr-gail-master" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -331,12 +308,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/exp" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/hapg/algo" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/nsgd.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hapg/algo/seperated_storm.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -368,19 +345,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Seperate_model" />
-      <item itemvalue="Python.nsgd" />
-      <item itemvalue="Python.hapg (1)" />
       <item itemvalue="Python.storm" />
-      <item itemvalue="Python.GD_STORM_LVC" />
+      <item itemvalue="Python.seperated_storm" />
+      <item itemvalue="Python.GD_STORM_LVC_Hopper" />
+      <item itemvalue="Python.GD_STORM_LVC_Swimmer" />
+      <item itemvalue="Python.seperated_model" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.storm" />
-        <item itemvalue="Python.GD_STORM_LVC" />
-        <item itemvalue="Python.hapg (1)" />
-        <item itemvalue="Python.nsgd" />
-        <item itemvalue="Python.Seperate_model" />
+        <item itemvalue="Python.seperated_model" />
+        <item itemvalue="Python.GD_STORM_LVC_Swimmer" />
+        <item itemvalue="Python.GD_STORM_LVC_Hopper" />
+        <item itemvalue="Python.seperated_storm" />
       </list>
     </recent_temporary>
   </component>
@@ -408,12 +385,12 @@
       <workItem from="1567729145278" duration="352000" />
       <workItem from="1567735119536" duration="1408000" />
       <workItem from="1567820237557" duration="5864000" />
-      <workItem from="1567988797581" duration="19120000" />
+      <workItem from="1567988797581" duration="27066000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96615000" />
+    <option name="totallyTimeSpent" value="104561000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -428,6 +405,32 @@
     <frame x="0" y="25" width="2560" height="1415" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2820207" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="File Transfer" order="0" weight="0.32831088" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49822626" weight="0.28786677" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.49801746" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49980292" weight="0.3280507" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4990146" weight="0.27993655" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5017738" side_tool="true" weight="0.35233572" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32672483" />
+      <window_info anchor="right" id="Remote Host" order="0" weight="0.32975337" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Coverage" order="5" side_tool="true" />
+      <window_info anchor="right" id="SciView" order="6" weight="0.32975337" />
+    </layout>
+    <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2820207" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -444,7 +447,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5017738" side_tool="true" weight="0.35233572" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32699922" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32672483" />
       <window_info anchor="right" id="Remote Host" order="0" weight="0.32975337" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -452,7 +455,7 @@
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="right" id="Coverage" order="5" side_tool="true" />
       <window_info anchor="right" id="SciView" order="6" weight="0.32975337" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -473,88 +476,80 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/hapg_pytorch$GD_STORM_LVC_Hopper.coverage" NAME="GD_STORM_LVC_Hopper Coverage Results" MODIFIED="1568020527840" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HAPG_LVC" />
     <SUITE FILE_PATH="coverage/dppo$sgd_ps.coverage" NAME="sgd_ps Coverage Results" MODIFIED="1562910029427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HAPG_LVC" />
-    <SUITE FILE_PATH="coverage/hapg_pytorch$GD_STORM_LVC.coverage" NAME="GD_STORM_LVC Coverage Results" MODIFIED="1568014996300" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HAPG_LVC" />
+    <SUITE FILE_PATH="coverage/hapg_pytorch$GD_STORM_LVC.coverage" NAME="GD_STORM_LVC Coverage Results" MODIFIED="1568018806810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HAPG_LVC" />
     <SUITE FILE_PATH="coverage/hapg_pytorch$hapg_dice.coverage" NAME="hapg_dice Coverage Results" MODIFIED="1567735617686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HAPG_LVC" />
-    <SUITE FILE_PATH="coverage/hapg_pytorch$sgd.coverage" NAME="sgd Coverage Results" MODIFIED="1567826438929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HAPG_LVC" />
+    <SUITE FILE_PATH="coverage/hapg_pytorch$sgd.coverage" NAME="sgd Coverage Results" MODIFIED="1568018478233" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HAPG_LVC" />
+    <SUITE FILE_PATH="coverage/hapg_pytorch$seperated_storm.coverage" NAME="seperated_storm Coverage Results" MODIFIED="1568019040811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hapg/algo" />
     <SUITE FILE_PATH="coverage/pytorch_a2c_ppo_acktr_gail_master$main.coverage" NAME="main Coverage Results" MODIFIED="1557998152558" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pytorch_a2c_ppo_acktr_gail_master$dppo_debug.coverage" NAME="dppo_debug Coverage Results" MODIFIED="1558326302992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/hapg_pytorch$hapg__1_.coverage" NAME="hapg (1) Coverage Results" MODIFIED="1568012861351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/pytorch_a2c_ppo_acktr_gail_master$single_node_ppo.coverage" NAME="single_node_ppo Coverage Results" MODIFIED="1558767882101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/single_machine_PPO" />
-    <SUITE FILE_PATH="coverage/hapg_pytorch$storm.coverage" NAME="storm Coverage Results" MODIFIED="1568016553321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/hapg_pytorch$storm.coverage" NAME="storm Coverage Results" MODIFIED="1568026721213" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/hapg_pytorch$GD_STORM_LVC_Swimmer.coverage" NAME="GD_STORM_LVC_Swimmer Coverage Results" MODIFIED="1568020543325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HAPG_LVC" />
     <SUITE FILE_PATH="coverage/pytorch_a2c_ppo_acktr_gail_master$dppo.coverage" NAME="dppo Coverage Results" MODIFIED="1558323367991" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/hapg_pytorch$hapg.coverage" NAME="hapg Coverage Results" MODIFIED="1568008398021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/9.9/hc" />
     <SUITE FILE_PATH="coverage/hapg_pytorch$GD_SPIDER_LVC.coverage" NAME="GD_SPIDER_LVC Coverage Results" MODIFIED="1567996375225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HAPG_LVC" />
     <SUITE FILE_PATH="coverage/hapg_pytorch$sgd_ps.coverage" NAME="sgd_ps Coverage Results" MODIFIED="1563191718584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HAPG_LVC" />
-    <SUITE FILE_PATH="coverage/hapg_pytorch$nsgd.coverage" NAME="nsgd Coverage Results" MODIFIED="1568008886756" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/exp" />
+    <SUITE FILE_PATH="coverage/hapg_pytorch$nsgd.coverage" NAME="nsgd Coverage Results" MODIFIED="1568018390026" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/exp" />
     <SUITE FILE_PATH="coverage/hapg_pytorch$hapg_ps.coverage" NAME="hapg_ps Coverage Results" MODIFIED="1563195217700" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HAPG_LVC" />
     <SUITE FILE_PATH="coverage/hapg_pytorch$sgd_ps_ad.coverage" NAME="sgd_ps_ad Coverage Results" MODIFIED="1563195105929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HAPG_LVC" />
     <SUITE FILE_PATH="coverage/hapg_pytorch$Seperate_model.coverage" NAME="Seperate_model Coverage Results" MODIFIED="1568008826570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HAPG_LVC" />
+    <SUITE FILE_PATH="coverage/hapg_pytorch$seperated_model.coverage" NAME="seperated_model Coverage Results" MODIFIED="1568024010559" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hapg" />
     <SUITE FILE_PATH="coverage/hapg_pytorch$GD_STORM_LVC_lr.coverage" NAME="GD_STORM_LVC_lr Coverage Results" MODIFIED="1567991127685" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HAPG_LVC" />
     <SUITE FILE_PATH="coverage/hapg_pytorch$GD_STORM_LVC_Walker_2D.coverage" NAME="GD_STORM_LVC_Walker_2D Coverage Results" MODIFIED="1567823662072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/HAPG_LVC" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>magic_box</expression-string>
+        <expression-string>jacob</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self.actor</expression-string>
+        <expression-string>prev_params</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>actor</expression-string>
+        <expression-string>d_grad</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>infos</expression-string>
+        <expression-string>product</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>self.kl_coef</expression-string>
+        <expression-string>current_grad</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>dist</expression-string>
+        <expression-string>action_log_probs</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>envs</expression-string>
+        <expression-string>values</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>envs.num_envs</expression-string>
+        <expression-string>x</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>rollouts</expression-string>
+        <expression-string>action</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/arguments.py" />
-    <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/envs.py" />
-    <entry file="file://$PROJECT_DIR$/dppo.py" />
-    <entry file="file://$PROJECT_DIR$/render_test.py" />
-    <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/model.py" />
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/baselines/bench/monitor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="62" column="28" selection-start-line="62" selection-start-column="17" selection-end-line="62" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/storage.py" />
     <entry file="file://$PROJECT_DIR$/main.py" />
     <entry file="file://$PROJECT_DIR$/a2c_ppo_acktr/utils.py" />
@@ -597,30 +592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/HAPG_LVC/GD_STORM_LVC_Walker_2D.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hapg/distributions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="71" column="8" selection-start-line="71" selection-start-column="8" selection-end-line="71" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hapg/storage.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3312">
-          <caret line="10" column="44" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/torch/autograd/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
@@ -628,27 +599,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1325">
-          <caret line="538" selection-start-line="538" selection-end-line="538" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hapg/algo/hapg_lvc_adam.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="184">
           <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hapg/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="216" column="56" selection-start-line="216" selection-start-column="56" selection-end-line="216" selection-end-column="56" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -692,16 +646,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nsgd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="38" column="15" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hapg/algo/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -715,20 +659,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hapg/algo/vpg_dice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="644">
-          <caret line="30" column="32" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vpg_dice.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -746,49 +676,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hapg/algo/storm_lvc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-810">
-          <caret line="134" column="20" selection-start-line="134" selection-start-column="8" selection-end-line="134" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HAPG_LVC/sgd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hapg/algo/seperated_hapg.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HAPG_LVC/Seperated_hapg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1955">
-          <caret line="85" column="18" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/HAPG_LVC/GD_STORM_LVC.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="36" column="14" lean-forward="true" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -803,32 +696,172 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/storm.py">
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/torch/__init__.pyi">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/pyro/infer/util.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+        <state relative-caret-position="911">
+          <caret line="193" column="13" selection-start-line="193" selection-start-column="13" selection-end-line="193" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HAPG_LVC/sgd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1541">
+          <caret line="67" column="47" selection-start-line="67" selection-start-column="47" selection-end-line="67" selection-end-column="47" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hapg/algo/seperated_storm.py">
+    <entry file="file://$PROJECT_DIR$/HAPG_LVC/Seperated_hapg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1444">
-          <caret line="164" column="45" selection-start-line="164" selection-start-column="34" selection-end-line="164" selection-end-column="45" />
+        <state relative-caret-position="825">
+          <caret line="85" column="18" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="18" />
           <folding>
-            <element signature="e#0#12#0" expanded="true" />
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hapg/storage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hapg/distributions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="29" column="33" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HAPG_LVC/GD_STORM_LVC_Swimmer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="42" column="50" lean-forward="true" selection-start-line="42" selection-start-column="50" selection-end-line="42" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HAPG_LVC/GD_STORM_LVC_Hopper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HAPG_LVC/GD_STORM_LVC.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="29" selection-start-line="29" selection-end-line="30" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HAPG_LVC/GD_STORM_LVC_Walker_2D.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="39" column="33" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/torch/nn/modules/module.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="535" selection-start-line="535" selection-end-line="535" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hapg/algo/storm_lvc.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="134" column="20" selection-start-line="134" selection-start-column="8" selection-end-line="134" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hapg/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="55" column="24" selection-start-line="55" selection-start-column="20" selection-end-line="55" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vpg_dice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="749">
+          <caret line="105" column="53" lean-forward="true" selection-start-line="105" selection-start-column="53" selection-end-line="105" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hapg/algo/vpg_dice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="27" column="80" lean-forward="true" selection-start-line="27" selection-start-column="80" selection-end-line="27" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hapg/envs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="183" selection-start-line="183" selection-end-line="183" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/torch/distributions/normal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="48" column="20" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hapg/seperated_model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="54" column="33" selection-start-line="54" selection-start-column="33" selection-end-line="54" selection-end-column="33" />
+        <state relative-caret-position="322">
+          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hapg/algo/seperated_storm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+          <folding>
+            <element signature="e#2783#3955#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nsgd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>

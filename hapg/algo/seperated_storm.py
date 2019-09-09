@@ -65,7 +65,7 @@ class STORM_LVC():
         self.optimizer.step()
 
         self.grad_norm_sq_cum = self.grad_norm_sq_cum + torch.norm(grad) ** 2
-        return value_loss.item(), action_loss.item(), dist_entropy.item(), grad, d_theta
+        return value_loss.item(), action_loss.item(), None, grad, d_theta
 
     # Added by Zebang
     # BEGIN
@@ -162,4 +162,4 @@ class STORM_LVC():
 
         self.grad_norm_sq_cum = self.grad_norm_sq_cum + torch.norm(grad) ** 2
 
-        return value_loss.item(), action_loss.item(), dist_entropy.item(), grad, d_theta
+        return value_loss.item(), action_loss.item(), None, grad, d_theta

@@ -21,11 +21,8 @@ from hapg.model import Policy
 from hapg.storage import RolloutStorage
 
 GAMMA = 0.995
-LR = 0.003
+LR = 0.03
 BATCH_SIZE = 32
-NUM_EPOC = 10
-BETA = 0.2
-TARGET = 0.01
 SEED = 1
 CUDA = True
 ENV_NAME = "Hopper-v2"
@@ -33,7 +30,7 @@ outer_batch = 1000
 inner_batch = 1000
 num_inner = 10
 for SEED in [11, 21]:
-    for ENV_NAME in ["HalfCheetah-v2"]:
+    for ENV_NAME in ["Walker2d-v2"]:
         for num_inner in [0]:
             if num_inner == 10:
                 logdir = "./HAPG_LVC_adam/%s/batchsize%d_innersize%d_seed%d_lr%f"%(str(ENV_NAME),outer_batch, inner_batch, SEED, LR)
