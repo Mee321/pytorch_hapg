@@ -13,7 +13,8 @@ class STORM_LVC():
                  critic_learning_rate=None,
                  actor_learning_rate_initial=1,
                  alpha_initial=1,
-                 max_grad_norm=None):
+                 max_grad_norm=None,
+                 device="cpu"):
 
         self.actor_critic = actor_critic
         self.value_loss_coef = value_loss_coef
@@ -28,6 +29,7 @@ class STORM_LVC():
             actor_critic.parameters(), lr=self.critic_learning_rate)
         self.grad_norm_sq_cum = 0
         self.iteration = 1
+        self.device = device
 
     def update(self, rollouts):
         obs_shape = rollouts.obs.size()[2:]
@@ -72,7 +74,7 @@ class STORM_LVC():
         action_loss = -(advantages.detach() * magic_box).mean()
         # print(torch.autograd.grad(action_loss, self.actor_critic.parameters(), allow_unused=True))
         grad = torch.autograd.grad(action_loss, self.actor_critic.parameters(), allow_unused=True, retain_graph=True)
-        grad = flatten_tuple(grad, self.alignment)
+        grad = flatten_tuple(grad, self.alignment, self.device)
 
         prev_params = get_flat_params_from(self.actor_critic)
         direction = grad / torch.norm(grad)
@@ -119,11 +121,11 @@ class STORM_LVC():
         magic_box = probs / probs.detach()
         action_loss = -(advantages.detach() * magic_box).mean()
         grad = torch.autograd.grad(action_loss, self.actor_critic.parameters(), allow_unused=True, retain_graph=True)
-        grad = flatten_tuple(grad, self.alignment)
+        grad = flatten_tuple(grad, self.alignment, self.device)
 
-        self.optimizer.zero_grad()
-        value_loss.backward()
-        self.optimizer.step()
+        # self.optimizer.zero_grad()
+        # value_loss.backward()
+        # self.optimizer.step()
 
         return grad
 
@@ -175,10 +177,10 @@ class STORM_LVC():
         action_loss = -(magic_box * advantages.detach()).mean()
         jacob = torch.autograd.grad(action_loss, self.actor_critic.parameters(), allow_unused=True, retain_graph=True,
                                     create_graph=True)
-        jacob = flatten_tuple(jacob, self.alignment)
+        jacob = flatten_tuple(jacob, self.alignment, self.device)
         product = torch.dot(jacob, d_theta)
         d_grad = torch.autograd.grad(product, self.actor_critic.parameters(), allow_unused=True, retain_graph=True)
-        grad = (1 - alpha) * prev_grad + alpha * current_grad + (1 - alpha) * flatten_tuple(d_grad, self.alignment)
+        grad = (1 - alpha) * prev_grad + alpha * current_grad + (1 - alpha) * flatten_tuple(d_grad, self.alignment, self.device)
 
         # update params
         prev_params = get_flat_params_from(self.actor_critic)

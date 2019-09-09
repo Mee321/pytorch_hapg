@@ -11,7 +11,8 @@ class HAPG_LVC():
                  entropy_coef,
                  lr=None,
                  lr_inner=None,
-                 max_grad_norm=None):
+                 max_grad_norm=None,
+                 device="cpu"):
 
         self.actor_critic = actor_critic
         self.value_loss_coef = value_loss_coef
@@ -22,7 +23,7 @@ class HAPG_LVC():
         # value net optimizer
         self.optimizer = optim.Adam(
             actor_critic.parameters(), lr=self.lr)
-
+        self.device = device
     def update(self, rollouts):
         obs_shape = rollouts.obs.size()[2:]
         action_shape = rollouts.actions.size()[-1]
@@ -66,7 +67,7 @@ class HAPG_LVC():
         action_loss = -(advantages.detach() * magic_box).mean()
         # print(torch.autograd.grad(action_loss, self.actor_critic.parameters(), allow_unused=True))
         grad = torch.autograd.grad(action_loss, self.actor_critic.parameters(), allow_unused=True, retain_graph=True)
-        grad = flatten_tuple(grad, self.alignment)
+        grad = flatten_tuple(grad, self.alignment, self.device)
 
         prev_params = get_flat_params_from(self.actor_critic)
         direction = grad / torch.norm(grad)
@@ -123,11 +124,11 @@ class HAPG_LVC():
         # action_loss = -(prob_acc * rewards).mean()
         action_loss = -(magic_box * advantages.detach()).mean()
         jacob = torch.autograd.grad(action_loss, self.actor_critic.parameters(), allow_unused=True, retain_graph=True, create_graph=True)
-        jacob = flatten_tuple(jacob, self.alignment)
+        jacob = flatten_tuple(jacob, self.alignment, self.device)
         # print(jacob.shape, d_theta.shape)
         product = torch.dot(jacob, d_theta)
         d_grad = torch.autograd.grad(product, self.actor_critic.parameters(), allow_unused=True, retain_graph=True)
-        grad = prev_grad + flatten_tuple(d_grad, self.alignment)
+        grad = prev_grad + flatten_tuple(d_grad, self.alignment, self.device)
 
         # update params
         prev_params = get_flat_params_from(self.actor_critic)

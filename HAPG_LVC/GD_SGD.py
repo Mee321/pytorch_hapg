@@ -12,7 +12,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 
-from hapg.algo.storm_lvc import STORM_LVC
+
+from hapg.algo.hapg_lvc import HAPG_LVC
 from hapg.utils import *
 from hapg.algo import gail
 from hapg.arguments import get_args
@@ -21,10 +22,7 @@ from hapg.model import Policy
 from hapg.storage import RolloutStorage
 
 GAMMA = 0.995
-LR_CRITIC = 1e-2
-LR_ACTOR_INITIAL = 6e-2
-ALPHA_INITIAL = 1
-ALPHA_EXP = 2 / 3
+LR = 3e-2
 BATCH_SIZE = 32
 NUM_EPOC = 10
 BETA = 0.2
@@ -34,19 +32,19 @@ CUDA = True
 # ENV_NAME = "Walker2d-v2"
 outer_batch = 1000
 inner_batch = 1000
-num_inner = 10
-num_out = 100
-np.random.seed(0)
+num_inner = 0
+
 for SEED in [11, 21]:
-    for ENV_NAME in ["HalfCheetah-v2", "Walker2d-v2", "Hopper-v2", "Humanoid-v2"]:
-    # for ENV_NAME in ["Walker2d-v2", "Hopper-v2", "Humanoid-v2"]:
-        logdir = "./GD_STORM_LVC/%s/batchsize%d_innersize%d_seed%d_lrcritic%f_lractorinit%f" % (
-            str(ENV_NAME), outer_batch, inner_batch, SEED, LR_CRITIC, LR_ACTOR_INITIAL)
+    # for ENV_NAME in ["HalfCheetah-v2", "Walker2d-v2", "Hopper-v2", "Humanoid-v2"]:
+    for ENV_NAME in ["Walker2d-v2", "Hopper-v2", "Humanoid-v2"]:
+        logdir = "./GD_SGD/%s/batchsize%d_innersize%d_seed%d_lr%f_clr%f" % (
+        str(ENV_NAME), outer_batch, inner_batch, SEED, LR, LR)
+        # print(ENV_NAME)
         writer = SummaryWriter(log_dir=logdir)
         torch.manual_seed(SEED)
         torch.cuda.manual_seed_all(SEED)
 
-        torch.set_num_threads(6)
+        torch.set_num_threads(1)
         device = torch.device("cuda:0" if CUDA else "cpu")
 
         envs = make_vec_envs(ENV_NAME, SEED, 1,
@@ -55,13 +53,11 @@ for SEED in [11, 21]:
         actor_critic = Policy(envs.observation_space.shape, envs.action_space, base_kwargs={'recurrent': False})
         actor_critic.to(device)
 
-        agent = STORM_LVC(
-            actor_critic=actor_critic,
-            value_loss_coef=0.5,
-            entropy_coef=0.0,
-            critic_learning_rate=LR_CRITIC,
-            actor_learning_rate_initial=LR_ACTOR_INITIAL,
-            alpha_initial=ALPHA_INITIAL,
+        agent = HAPG_LVC(
+            actor_critic,
+            0.5,
+            0.0,
+            lr=LR,
             device=device
         )
 
@@ -82,13 +78,8 @@ for SEED in [11, 21]:
         episode_rewards = deque(maxlen=10)
         total_num_steps = 0
 
-        ###############################################
-        #   compute the gradient in the first iteration
-        ###############################################
-        ###############################################
-        #       Step 1: roll out trajectories
-        ###############################################
-        for j in range(num_out):
+        for j in count():
+            # sample
             for step in range(outer_batch):
                 # Sample actions
                 with torch.no_grad():
@@ -115,14 +106,11 @@ for SEED in [11, 21]:
                     rollouts.obs[-1], rollouts.recurrent_hidden_states[-1],
                     rollouts.masks[-1]).detach()
 
-            ###############################################
-            #       Step 2: process sample
-            ###############################################
+            # process sample
             rollouts.compute_returns(next_value, True, 0.99,
                                      0.97, True)
-            ###############################################
-            #       Step 3: update parameters
-            ###############################################
+
+            # compute updated params
             prev_params = get_flat_params_from(actor_critic)
             value_loss, action_loss, dist_entropy, grad, d_theta = agent.update(rollouts)
             cur_params = get_flat_params_from(actor_critic)
@@ -131,16 +119,7 @@ for SEED in [11, 21]:
             writer.add_scalar("Avg_return", np.mean(episode_rewards), total_num_steps)
             writer.add_scalar("grad_norm", torch.norm(grad), total_num_steps)
 
-            # grad_norm_sq_cum = grad_norm_sq_cum + torch.norm(grad)**2
-
             for inner_update in range(num_inner):
-                agent.iteration = inner_update+2
-                ###############################################
-                #   compute the gradient in the following iterations
-                ###############################################
-                ###############################################
-                #       Step 1: roll out trajectories
-                ###############################################
                 a = np.random.uniform()
                 mix_params = a * prev_params + (1 - a) * cur_params
                 set_flat_params_to(actor_critic, mix_params)
@@ -170,13 +149,10 @@ for SEED in [11, 21]:
                         rollouts_inner.obs[-1], rollouts_inner.recurrent_hidden_states[-1],
                         rollouts_inner.masks[-1]).detach()
 
-                ###############################################
-                #       Step 2: process sample
-                ###############################################
-                rollouts_inner.compute_returns(next_value, True, 0.99, 0.97, True)
-                ###############################################
-                #       Step 3: update parameters
-                ###############################################
+                # process sample
+                rollouts_inner.compute_returns(next_value, True, 0.99,
+                                               0.97, True)
+                # compute updated params
                 set_flat_params_to(actor_critic, cur_params)
                 prev_params = cur_params
                 value_loss, action_loss, dist_entropy, grad, d_theta = agent.inner_update(rollouts_inner, grad, d_theta)
@@ -187,15 +163,14 @@ for SEED in [11, 21]:
                 print(total_num_steps, np.mean(episode_rewards))
                 writer.add_scalar("Avg_return", np.mean(episode_rewards), total_num_steps)
                 writer.add_scalar("grad_norm", torch.norm(grad), total_num_steps)
-                if inner_update % 10 == 0 and len(episode_rewards) > 1:
-                    print(
-                        "Updates {}, num timesteps {}\n Last {} training episodes: mean/median reward {:.1f}/{:.1f}, "
-                        "min/max reward {:.1f}/{:.1f}\n "
-                            .format(inner_update, total_num_steps,
-                                    len(episode_rewards), np.mean(episode_rewards),
-                                    np.median(episode_rewards), np.min(episode_rewards),
-                                    np.max(episode_rewards), dist_entropy, value_loss,
-                                    action_loss))
-                    print("grad_sq_norm_cum {}\n".format(agent.grad_norm_sq_cum))
-                if total_num_steps > 3e6:
-                    break
+
+            if j % 1 == 0 and len(episode_rewards) > 1:
+                print(
+                    "Updates {}, num timesteps {}\n Last {} training episodes: mean/median reward {:.1f}/{:.1f}, min/max reward {:.1f}/{:.1f}\n"
+                        .format(j, total_num_steps,
+                                len(episode_rewards), np.mean(episode_rewards),
+                                np.median(episode_rewards), np.min(episode_rewards),
+                                np.max(episode_rewards), dist_entropy, value_loss,
+                                action_loss))
+            if total_num_steps > 3e6:
+                break

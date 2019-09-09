@@ -1,4 +1,7 @@
-from fbpca import pca
+from fbpca import pca, diffsnorm
+from numpy import linalg as LA
+
+
 class LONuclearNormBall:
     def __init__(self,
                  radius=1
@@ -12,8 +15,17 @@ class LONuclearNormBall:
         :return:
         Y: ndarray
         """
-        (U, _, Va) = pca(target_matrix, 1, True)
+        (U, s, Va) = pca(target_matrix, 1, True)
+        # err = diffsnorm(target_matrix, U, s, Va)
+        # print(LA.norm(target_matrix))
+        return self.radius * U * Va
 
-        return self.radius*U*Va
 
+class LODebug:
+    def __init__(self,
+                 radius=1
+                 ):
+        self.radius = radius
 
+    def lo_oracle(self, target_matrix):
+        return target_matrix

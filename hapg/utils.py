@@ -108,22 +108,22 @@ def get_flat_grad_from(net, grad_grad=False):
     flat_grad = torch.cat(grads)
     return flat_grad
 
-def get_ndarrays_from_flat(vec, net):
-    ndarrays = []
-    prev_ind = 0
-    for param in net.parameters():
-        flat_size = int(np.prod(list(param.size())))
-        ndarray = vec[prev_ind:prev_ind + flat_size].view(param.size())
-        ndarrays.append(ndarray)
+# def get_ndarrays_from_flat(vec, net):
+#     ndarrays = []
+#     prev_ind = 0
+#     for param in net.parameters():
+#         flat_size = int(np.prod(list(param.size())))
+#         ndarray = vec[prev_ind:prev_ind + flat_size].view(param.size()).detach().numpy()
+#         ndarrays.append(ndarray)
+#
+#     return ndarrays
 
-    return ndarrays
-
-def flatten_tuple(grads, align):
+def flatten_tuple(grads, align, device):
     flat_grads = []
     for i in range(4):
         if grads[i] is not None:
             flat_grads.append(grads[i].view(-1))
-    flat_grads.append(torch.FloatTensor([0]*align).to('cuda:0'))
+    flat_grads.append(torch.FloatTensor([0]*align).to(device))
     for i in range(10, len(grads)):
         if grads[i] is not None:
             flat_grads.append(grads[i].view(-1))
