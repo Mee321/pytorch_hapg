@@ -66,6 +66,7 @@ def cleanup_log_dir(log_dir):
         for f in files:
             os.remove(f)
 
+
 def normal_entropy(std):
     var = std.pow(2)
     entropy = 0.5 + 0.5 * torch.log(2 * var * math.pi)
@@ -75,7 +76,7 @@ def normal_entropy(std):
 def normal_log_density(x, mean, log_std, std):
     var = std.pow(2)
     log_density = -(x - mean).pow(2) / (
-        2 * var) - 0.5 * math.log(2 * math.pi) - log_std
+            2 * var) - 0.5 * math.log(2 * math.pi) - log_std
     return log_density.sum(1, keepdim=True)
 
 
@@ -97,6 +98,30 @@ def set_flat_params_to(model, flat_params):
         prev_ind += flat_size
 
 
+def set_flat_params_to_actor(model, flat_params):
+    prev_ind = 0
+    block = 0
+    for param in model.parameters():
+        flat_size = int(np.prod(list(param.size())))
+        if block < 4 or block > 9:
+            param.data.copy_(
+                flat_params[prev_ind:prev_ind + flat_size].view(param.size()))
+        prev_ind += flat_size
+        block += + 1
+
+
+def set_flat_params_to_critic(model, flat_params):
+    prev_ind = 0
+    block = 0
+    for param in model.parameters():
+        flat_size = int(np.prod(list(param.size())))
+        if 4 <= block <= 9:
+            param.data.copy_(
+                flat_params[prev_ind:prev_ind + flat_size].view(param.size()))
+        prev_ind += flat_size
+        block += 1
+
+
 def get_flat_grad_from(net, grad_grad=False):
     grads = []
     for param in net.parameters():
@@ -107,6 +132,7 @@ def get_flat_grad_from(net, grad_grad=False):
 
     flat_grad = torch.cat(grads)
     return flat_grad
+
 
 # def get_ndarrays_from_flat(vec, net):
 #     ndarrays = []
@@ -123,7 +149,7 @@ def flatten_tuple(grads, align, device):
     for i in range(4):
         if grads[i] is not None:
             flat_grads.append(grads[i].view(-1))
-    flat_grads.append(torch.FloatTensor([0]*align).to(device))
+    flat_grads.append(torch.FloatTensor([0] * align).to(device))
     for i in range(10, len(grads)):
         if grads[i] is not None:
             flat_grads.append(grads[i].view(-1))

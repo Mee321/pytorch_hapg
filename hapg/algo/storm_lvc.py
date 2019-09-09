@@ -197,6 +197,18 @@ class STORM_LVC():
         value_loss.backward()
         self.optimizer.step()
 
+        # DEBUG #
+        # params_after_adam_step = get_flat_params_from(self.actor_critic)
+        #
+        # prev_ind = 0
+        # params_difference_after_adam_step = params_after_adam_step - updated_params
+        # for param in self.actor_critic.parameters():
+        #     flat_size = int(np.prod(list(param.size())))
+        #     print(torch.norm(params_difference_after_adam_step[prev_ind:prev_ind + flat_size]))
+        #     prev_ind += flat_size
+
+        # END DEBUG #
+
         self.grad_norm_sq_cum = self.grad_norm_sq_cum + torch.norm(grad) ** 2
 
         return value_loss.item(), action_loss.item(), dist_entropy.item(), grad, d_theta

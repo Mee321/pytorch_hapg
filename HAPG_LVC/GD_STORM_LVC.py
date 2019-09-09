@@ -21,7 +21,7 @@ from hapg.model import Policy
 from hapg.storage import RolloutStorage
 
 GAMMA = 0.995
-LR_CRITIC = 1e-2
+LR_CRITIC = 5e-3
 LR_ACTOR_INITIAL = 6e-2
 ALPHA_INITIAL = 1
 ALPHA_EXP = 2 / 3
@@ -143,7 +143,7 @@ for SEED in [11, 21]:
                 ###############################################
                 a = np.random.uniform()
                 mix_params = a * prev_params + (1 - a) * cur_params
-                set_flat_params_to(actor_critic, mix_params)
+                set_flat_params_to_actor(actor_critic, mix_params)
                 for step in range(inner_batch):
                     # Sample actions
                     with torch.no_grad():
@@ -153,6 +153,9 @@ for SEED in [11, 21]:
 
                     # Obser reward and next obs
                     obs, reward, done, infos = envs.step(action)
+                    # print(done)
+                    if done is True:
+                        print("It is done")
                     for info in infos:
                         if 'episode' in info.keys():
                             episode_rewards.append(info['episode']['r'])
@@ -187,6 +190,7 @@ for SEED in [11, 21]:
                 print(total_num_steps, np.mean(episode_rewards))
                 writer.add_scalar("Avg_return", np.mean(episode_rewards), total_num_steps)
                 writer.add_scalar("grad_norm", torch.norm(grad), total_num_steps)
+                writer.add_scalar("grad_sq_norm_cum", agent.grad_norm_sq_cum, total_num_steps)
                 if inner_update % 10 == 0 and len(episode_rewards) > 1:
                     print(
                         "Updates {}, num timesteps {}\n Last {} training episodes: mean/median reward {:.1f}/{:.1f}, "
