@@ -31,12 +31,12 @@ TARGET = 0.01
 SEED = 1
 CUDA = True
 ENV_NAME = "HalfCheetah-v2"
-outer_batch = 1000
+outer_batch = 10000
 inner_batch = 1000
 num_inner = 0
 
 
-logdir = "./HAPG_LVC/%s/batchsize%d_innersize%d_seed%d_lr%f" % (
+logdir = "./SGD/%s/batchsize%d_innersize%d_seed%d_lr%f" % (
 str(ENV_NAME), outer_batch, inner_batch, SEED, ACTOR_LR)
 writer = SummaryWriter(log_dir=logdir)
 torch.manual_seed(SEED)
@@ -47,7 +47,7 @@ torch.set_num_threads(1)
 device = torch.device("cuda:0" if CUDA else "cpu")
 
 envs = make_vec_envs(ENV_NAME, SEED, 1,
-                     GAMMA, "./", device, False)
+                     GAMMA, "./", device, True)
 
 actor = Policy(envs.observation_space.shape[0], envs.action_space.shape[0], hidden_size=64)
 critic = Value(envs.observation_space.shape[0], hidden_size=64)
@@ -92,6 +92,8 @@ for j in count():
             if 'episode' in info.keys():
                 episode_rewards.append(info['episode']['r'])
         # If done then clean the history of observations.
+        if done:
+            obs = envs.reset()
         masks = torch.FloatTensor(
             [[0.0] if done_ else [1.0] for done_ in done])
         bad_masks = torch.FloatTensor(
@@ -133,6 +135,8 @@ for j in count():
                 if 'episode' in info.keys():
                     episode_rewards.append(info['episode']['r'])
             # If done then clean the history of observations.
+            if done:
+                obs = envs.reset()
             masks = torch.FloatTensor(
                 [[0.0] if done_ else [1.0] for done_ in done])
             bad_masks = torch.FloatTensor(

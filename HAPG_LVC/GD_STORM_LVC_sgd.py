@@ -30,10 +30,10 @@ CUDA = True
 ENV_NAME = "Hopper-v2"
 outer_batch = 10000
 inner_batch = 10000
-num_inner = 1000
+num_inner = 0
 
 
-logdir = "./GD_STORM_LVC/%s/batchsize%d_innersize%d_seed%d_lrcritic%f_lractorinit%f_" % (
+logdir = "./GD_SGD/%s/batchsize%d_innersize%d_seed%d_lrcritic%f_lractorinit%f_" % (
     str(ENV_NAME), outer_batch, inner_batch, SEED, LR_CRITIC, LR_ACTOR_INITIAL)
 writer = SummaryWriter(log_dir=logdir)
 torch.manual_seed(SEED)
