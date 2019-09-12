@@ -121,7 +121,7 @@ for j in count():
     value_loss, action_loss, dist_entropy, grad, d_theta = agent.update(rollouts)
     cur_params = get_flat_params_from(actor_critic)
     rollouts.after_update()
-    total_num_steps += outer_batch * num_process
+    total_num_steps += outer_batch
     print(total_num_steps, np.mean(episode_rewards))
     writer.add_scalar("Avg_return", np.mean(episode_rewards), total_num_steps)
     writer.add_scalar("grad_norm", torch.norm(grad), total_num_steps)
@@ -184,7 +184,7 @@ for j in count():
         rollouts_inner.after_update()
         cur_params = get_flat_params_from(actor_critic)
 
-        total_num_steps += inner_batch * num_process
+        total_num_steps += inner_batch
         print(total_num_steps, np.mean(episode_rewards))
         writer.add_scalar("Avg_return", np.mean(episode_rewards), total_num_steps)
         writer.add_scalar("grad_norm", torch.norm(grad), total_num_steps)
