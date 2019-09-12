@@ -94,8 +94,6 @@ for j in count():
             if 'episode' in info.keys():
                 episode_rewards.append(info['episode']['r'])
         # If done then clean the history of observations.
-        if done:
-            obs = envs.reset()
         masks = torch.FloatTensor(
             [[0.0] if done_ else [1.0] for done_ in done])
         bad_masks = torch.FloatTensor(
