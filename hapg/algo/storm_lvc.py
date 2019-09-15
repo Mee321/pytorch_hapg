@@ -131,10 +131,10 @@ class STORM_LVC():
 
     # END
 
-    def inner_update(self, rollouts, prev_grad, d_theta):
+    def inner_update(self, rollouts, prev_grad, d_theta, current_grad):
         # Added by Zebang
         # BEGIN
-        current_grad = self.compute_gradient(rollouts)
+        # current_grad = self.compute_gradient(rollouts)
         # actor_learning_rate = self.actor_learning_rate_initial / self.grad_norm_sq_cum ** (2 / 3)
         # alpha = self.alpha_initial * actor_learning_rate
         # actor_learning_rate = self.actor_learning_rate_initial/self.iteration**(2/3)

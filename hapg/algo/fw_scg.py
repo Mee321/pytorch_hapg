@@ -5,7 +5,7 @@ from hapg.utils import *
 from hapg.linear_optimization_oracles import LONuclearNormBall
 
 # LVC version, DiCE with a bug when denominator becomes 0
-class FWStormLVC():
+class FWSCG():
     def __init__(self,
                  actor_critic,
                  value_loss_coef,

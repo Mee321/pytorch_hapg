@@ -13,7 +13,7 @@ import torch.nn.functional as F
 import torch.optim as optim
 
 from hapg.algo.storm_lvc import STORM_LVC
-from hapg.algo.fw_storm_lvc import FWStormLVC
+from hapg.algo.fw_scg import FWSCG
 from hapg.utils import *
 from hapg.algo import gail
 from hapg.arguments import get_args
@@ -42,7 +42,7 @@ for npSEED in [0, 10]:
     for SEED in [11, 21]:
         for ENV_NAME in ["HalfCheetah-v2", "Walker2d-v2", "Hopper-v2", "Humanoid-v2"]:
         # for ENV_NAME in ["Walker2d-v2", "Hopper-v2", "Humanoid-v2"]:
-            logdir = "./GD_STORM_LVC/%s/batchsize%d_innersize%d_seed%d_npseed%d_lrcritic%f_lractorinit%f" % (
+            logdir = "./FW_SCG/%s/batchsize%d_innersize%d_seed%d_npseed%d_lrcritic%f_lractorinit%f" % (
                 str(ENV_NAME), outer_batch, inner_batch, SEED, npSEED, LR_CRITIC, LR_ACTOR_INITIAL)
             writer = SummaryWriter(log_dir=logdir)
             torch.manual_seed(SEED)
@@ -57,7 +57,7 @@ for npSEED in [0, 10]:
             actor_critic = Policy(envs.observation_space.shape, envs.action_space, base_kwargs={'recurrent': False})
             actor_critic.to(device)
 
-            agent = FWStormLVC(
+            agent = FWSCG(
                 actor_critic=actor_critic,
                 value_loss_coef=0.5,
                 entropy_coef=0.0,

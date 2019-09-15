@@ -17,7 +17,10 @@ class LONuclearNormBall:
         """
         (U, s, Va) = pca(target_matrix, 1, True)
         # err = diffsnorm(target_matrix, U, s, Va)
-        # print(LA.norm(target_matrix))
+        # print("in lO")
+        # print(target_matrix.shape)
+        # print(err/LA.norm(target_matrix))
+        # print(LA.norm(target_matrix)/s)
         return self.radius * U * Va
 
 
